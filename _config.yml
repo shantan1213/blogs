@@ -1,12 +1,13 @@
-title: Notes From the Build
-description: Shantan Yeddula's conversational notes on Java, Spring Boot, backend development, and platform engineering.
-url: https://shantan1213.github.io
-baseurl: /blogs
+title: Shantan Yeddula | Engineering Notes
+description: Shantan Yeddula's personal homepage and conversational notes on Java, Spring Boot, backend development, and platform engineering.
+url: https://blogs.platformdaemon.tech
+baseurl: ""
 theme: minima
 markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
 header_pages:
+  - journal/index.html
   - about.md
   - archive.md

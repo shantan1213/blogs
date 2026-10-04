@@ -1,0 +1,53 @@
+---
+layout: default
+title: Notes From the Build
+description: A personal engineering blog by Shantan Yeddula.
+---
+
+<link rel="stylesheet" href="{{ '/assets/css/blog.css' | relative_url }}">
+
+<div class="journal">
+  <section class="journal-hero">
+    <p class="journal-kicker"><span class="journal-dot"></span> A PERSONAL ENGINEERING JOURNAL</p>
+    <h1>Learning out loud<span>.</span></h1>
+    <p class="journal-lede">Hey, I’m Shantan. This is where I share the things I’m building, the bugs I run into, and the bits of backend and platform engineering I’m learning along the way.</p>
+    <div class="journal-links">
+      <a class="journal-button" href="/">A little about me <span aria-hidden="true">↗</span></a>
+      <a class="journal-text-link" href="https://github.com/shantan1213">Find me on GitHub <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="journal-topics" aria-label="Topics">
+      <span>Java</span><span>Spring Boot</span><span>Backend</span><span>Platform engineering</span>
+    </div>
+    <div class="journal-decoration" aria-hidden="true"><span>✳</span><i></i><b></b></div>
+  </section>
+
+  <section class="journal-posts" aria-labelledby="latest-heading">
+    <div class="journal-section-head">
+      <div>
+        <p class="journal-kicker">THE NOTEBOOK</p>
+        <h2 id="latest-heading">Latest <em>writing</em></h2>
+      </div>
+      <p>Ideas are better when they’re shared. Here’s what I’ve been working through.</p>
+    </div>
+
+    {% assign ordered_posts = site.posts | sort: "date" | reverse %}
+    {% for post in ordered_posts %}
+    <article class="post-card">
+      <div class="post-meta"><span>{{ post.date | date: "%b %d, %Y" }}</span><span class="post-meta-dot">·</span><span>{{ post.categories | first | default: "Engineering" }}</span></div>
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      <p>{{ post.excerpt | strip_html | strip_newlines | truncate: 220 }}</p>
+      <a class="post-read" href="{{ post.url | relative_url }}">Read the story <span aria-hidden="true">↗</span></a>
+    </article>
+    {% endfor %}
+
+    {% unless site.posts.size > 0 %}
+    <div class="empty-note">First post is on the way. I’m still making notes.</div>
+    {% endunless %}
+  </section>
+
+  <section class="journal-signoff">
+    <span class="signoff-mark" aria-hidden="true">sy.</span>
+    <p>Thanks for stopping by. I’m building this one step at a time.</p>
+    <a href="mailto:shantanyeddula125@gmail.com">Say hello <span aria-hidden="true">↗</span></a>
+  </section>
+</div>
