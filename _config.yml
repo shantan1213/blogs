@@ -11,6 +11,3 @@ header_pages:
   - journal/index.html
   - about.md
   - archive.md
-
-# Add www URL for alternate domain
-www_url: https://www.platformdaemon.tech
