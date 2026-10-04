@@ -1,12 +1,12 @@
 :root {
   color-scheme: light;
-  --paper: #f6f7f3;
-  --ink: #20251f;
-  --muted: #687067;
-  --green: #b8d5aa;
-  --green-dark: #325a3e;
-  --line: #dfe3da;
-  --blue: #c9e4ed;
+  --paper: #fbf7f2;
+  --ink: #292522;
+  --muted: #70665f;
+  --green: #d89a78;
+  --green-dark: #713f34;
+  --line: #e8ddd4;
+  --blue: #ead8d0;
   --display: "Manrope", sans-serif;
   --body: "DM Sans", sans-serif;
   --mono: "DM Mono", monospace;
@@ -117,6 +117,27 @@ h2 { margin-bottom: 0; font-size: clamp(36px, 4.3vw, 53px); font-weight: 650; li
 .footer-inner { display: flex; align-items: center; justify-content: space-between; }
 .footer-inner .wordmark { font-size: 22px; }
 .footer-inner p { margin: 0; color: #7c8278; font-size: 10px; }
+
+/* Trial palette: warm ivory, terracotta, and soft clay. */
+.wordmark span, .accent, .note-star, .scroll-cue span, .tool-ci { color: #b96548; }
+.site-header nav a:hover, .hero-links a:hover, .contact-links a:hover { color: #a5533c; }
+.eyebrow { color: #8b6b5c; }
+.status-dot { background: #c56b4e; box-shadow: 0 0 0 4px rgba(197,107,78,.14); }
+.serif { color: #94513e; }
+.button-dark:hover { background: #50352d; }
+.career-mark { background: #754638; }
+.project-icon, .notes-icon, .mini-icon { background: #f3e5dc; color: #a5533c; }
+.project-icon svg, .notes-icon svg { stroke: #a5533c; }
+.mini-icon-blue { background: #eee3dc; color: #8a5b48; }
+.tool-java { background: #f6e8dc; }
+.tool-cloud { color: #6a7277; background: #e8e9e8; }
+.tool-data { color: #88705b; background: #f1e9de; }
+.intro-section { background: #f2e9e1; }
+.toolbox-section { background: #efe4da; }
+.contact-section { background: #ead6c9; }
+.project-card, .notes-card { background: #fffdfa; border-color: #e6d9cf; }
+.project-link, .tags span, .career-note { border-color: #e6d9cf; }
+.contact-links a, .footer-inner > a:last-child { color: #754638; }
 
 @media (max-width: 760px) {
   .shell { width: min(100% - 40px, 560px); }
