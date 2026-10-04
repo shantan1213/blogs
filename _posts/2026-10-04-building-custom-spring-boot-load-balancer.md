@@ -2,7 +2,8 @@
 layout: post
 title: "Building My First Spring Boot Request Proxy"
 date: 2026-10-04 13:00:00 +0530
-categories: [Java, Spring Boot]
+categories: [Java, Spring]
+permalink: /2026/10/04/building-a-spring-boot-request-proxy/
 excerpt: "Come along as I wire a Spring Boot proxy to two backend services, add H2 persistence, and learn why my first version is a request proxy—not quite a load balancer yet."
 ---
 
