@@ -361,51 +361,94 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
     .pricing-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 22px;
-      margin-top: 22px;
+      gap: 24px;
+      margin-top: 30px;
     }
 
     .pricing-card {
       display: flex;
       flex-direction: column;
-      min-height: 100%;
-      padding: 28px 24px;
+      min-height: 390px;
+      padding: 30px 26px 26px;
       border-radius: 22px;
-      border: 1px solid rgba(190, 209, 203, 0.13);
-      background: #1b262e;
+      border: 1px solid #e1e8ee;
+      background: #ffffff;
+      box-shadow: 0 12px 32px rgba(30, 58, 82, 0.055);
     }
 
     .pricing-card.featured {
-      background: linear-gradient(180deg, #26382f, #1b2926);
-      border-color: rgba(145, 183, 166, 0.24);
+      background: linear-gradient(155deg, #edf5fb, #ffffff 70%);
+      border-color: #c7dce9;
+    }
+
+    .pricing-label {
+      display: inline-flex;
+      align-self: flex-start;
+      margin-bottom: 20px;
+      padding: 7px 10px;
+      border: 1px solid #dceaf1;
+      border-radius: 999px;
+      background: #edf5fa;
+      color: #246178;
+      font: 500 10px/1.4 var(--mono);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
 
     .pricing-card h3 {
-      font-size: 26px;
+      font-size: 25px;
       letter-spacing: -0.05em;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
     }
 
     .pricing-card .price {
       display: block;
-      margin-bottom: 12px;
+      margin-bottom: 8px;
       font-size: 36px;
       font-weight: 800;
       letter-spacing: -0.05em;
-      color: #edf2ef;
+      color: #14212b;
+      white-space: nowrap;
+    }
+
+    .pricing-card .price small {
+      font-size: 17px;
+      font-weight: 650;
+      letter-spacing: -0.02em;
+    }
+
+    .pricing-frequency {
+      margin: 0 0 14px;
+      color: #287f88;
+      font-size: 12px;
+      font-weight: 700;
     }
 
     .pricing-card p,
     .pricing-card li {
-      color: rgba(231, 237, 240, 0.76);
-      line-height: 1.8;
+      color: #526271;
+      line-height: 1.7;
     }
 
     .pricing-card ul {
-      margin: 18px 0 0;
-      padding-left: 20px;
-      color: rgba(231, 237, 240, 0.8);
-      line-height: 1.9;
+      display: grid;
+      gap: 10px;
+      margin: 18px 0 26px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .pricing-card li {
+      position: relative;
+      padding-left: 24px;
+    }
+
+    .pricing-card li::before {
+      position: absolute;
+      left: 0;
+      color: #287f88;
+      content: "✓";
+      font-weight: 800;
     }
 
     .pricing-card .button {
@@ -413,9 +456,31 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
       justify-content: center;
     }
 
-    .pricing-card .button-dark {
-      background: #719888;
-      color: #101a17;
+    .pricing-card.custom-service {
+      border-color: #b9d9dc;
+      background: linear-gradient(155deg, #edf8f8, #ffffff 72%);
+    }
+
+    .pricing-card.custom-service .pricing-label {
+      border-color: #cce7e5;
+      background: #e8f5f3;
+      color: #246b70;
+    }
+
+    .pricing-card.custom-service .pricing-frequency {
+      color: #246b70;
+    }
+
+    .pricing-card .schedule-call {
+      min-height: 50px;
+      background: #16818a;
+      color: #ffffff;
+      box-shadow: 0 9px 24px rgba(22, 129, 138, 0.2);
+    }
+
+    .pricing-card .schedule-call:hover {
+      background: #106970;
+      color: #ffffff;
     }
 
     .footer-inner {
@@ -449,9 +514,16 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
 
       .hero,
       .why-grid,
-      .pricing-grid,
       .offer-grid {
         grid-template-columns: 1fr;
+      }
+
+      .pricing-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .pricing-card.custom-service {
+        grid-column: 1 / -1;
       }
 
       .hero {
@@ -482,6 +554,12 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
       .hero {
         min-height: auto;
         width: min(100% - 28px, 560px);
+      }
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+      .pricing-card.custom-service {
+        grid-column: auto;
       }
       .hero-actions {
         flex-direction: column;
@@ -659,6 +737,42 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
       border-color: #c7dce9;
       background: linear-gradient(155deg, #edf5fb, #ffffff 70%);
     }
+
+    .pricing-card.custom-service {
+      border-color: #b9d9dc;
+      background: linear-gradient(155deg, #edf8f8, #ffffff 72%);
+    }
+
+    .pricing-card .pricing-label {
+      border-color: #dceaf1;
+      background: #edf5fa;
+      color: #246178;
+    }
+
+    .pricing-card.custom-service .pricing-label {
+      border-color: #cce7e5;
+      background: #e8f5f3;
+      color: #246b70;
+    }
+
+    .pricing-card .pricing-frequency {
+      color: #287f88;
+    }
+
+    .pricing-card.custom-service .pricing-frequency {
+      color: #246b70;
+    }
+
+    .pricing-card .schedule-call {
+      background: #16818a;
+      color: #ffffff;
+      box-shadow: 0 9px 24px rgba(22, 129, 138, 0.2);
+    }
+
+    .pricing-card .schedule-call:hover {
+      background: #106970;
+      color: #ffffff;
+    }
   </style>
 </head>
 <body>
@@ -771,8 +885,10 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
       <h2 id="pricing-title">Simple plans for smarter operations.</h2>
       <div class="pricing-grid">
         <article class="pricing-card featured">
+          <span class="pricing-label">AI Calling Agent · SaaS</span>
           <h3>Starter</h3>
-          <span class="price">$99<span style="font-size:18px;">/mo</span></span>
+          <span class="price">$99<small>/mo</small></span>
+          <p class="pricing-frequency">Monthly subscription</p>
           <p>Up to 100 calls/mo, basic intake, SMS summaries, and calendar sync.</p>
           <ul>
             <li>Call routing</li>
@@ -782,8 +898,10 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
           <a class="button button-dark" href="mailto:support@platformdaemon.tech?subject=Starter%20Voice%20Agent%20Plan">Get Started <span aria-hidden="true">↗</span></a>
         </article>
         <article class="pricing-card">
+          <span class="pricing-label">AI Calling Agent · SaaS</span>
           <h3>Pro</h3>
-          <span class="price">$299<span style="font-size:18px;">/mo</span></span>
+          <span class="price">$299<small>/mo</small></span>
+          <p class="pricing-frequency">Monthly subscription</p>
           <p>Up to 500 calls/mo, emergency escalation routing, and full CRM integration.</p>
           <ul>
             <li>CRM integration</li>
@@ -792,16 +910,18 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
           </ul>
           <a class="button button-dark" href="mailto:support@platformdaemon.tech?subject=Pro%20Voice%20Agent%20Plan">Get Started <span aria-hidden="true">↗</span></a>
         </article>
-        <article class="pricing-card">
+        <article class="pricing-card custom-service">
+          <span class="pricing-label">Tailored Automation · One-Time</span>
           <h3>Custom Services</h3>
-          <span class="price">Custom</span>
-          <p>Tailored automation builds and service workflows customized to your business.</p>
+          <span class="price">$50 - $100</span>
+          <p class="pricing-frequency">Fixed project pricing · no monthly fee</p>
+          <p>Small Project vs. Complex Project tailored builds.</p>
           <ul>
-            <li>Custom project quotes</li>
-            <li>No hidden retainer fees</li>
-            <li>Flexible implementation</li>
+            <li>Small Projects: $50 (Quick automations &amp; basic workflows)</li>
+            <li>Complex Projects: $100 (Advanced integrations &amp; multi-step systems)</li>
+            <li>Custom workflow built for your business</li>
           </ul>
-          <a class="button button-dark" href="mailto:support@platformdaemon.tech?subject=Custom%20AI%20Services%20Quote">Request a Quote <span aria-hidden="true">↗</span></a>
+          <a class="button button-dark schedule-call" href="mailto:support@platformdaemon.tech?subject=Schedule%20a%20Custom%20Project%20Consultation&amp;body=Hi%20PlatformDaemon%2C%0A%0AI%27d%20like%20to%20book%20a%20consultation%20call%20about%20a%20custom%20automation%20project.%0A%0AMy%20project%20idea%3A%20">Schedule a Call <span aria-hidden="true">↗</span></a>
         </article>
       </div>
     </section>
