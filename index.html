@@ -291,6 +291,45 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
       letter-spacing: -0.05em;
     }
 
+    .offer-title {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      margin-bottom: 12px;
+    }
+
+    .offer-title h3 {
+      margin: 0;
+    }
+
+    .offer-icon {
+      display: grid;
+      width: 42px;
+      height: 42px;
+      flex: 0 0 42px;
+      place-items: center;
+      border: 1px solid #dceaf1;
+      border-radius: 12px;
+      background: #edf5fa;
+      color: #2563a6;
+    }
+
+    .offer-icon svg {
+      width: 22px;
+      height: 22px;
+      fill: none;
+      stroke: currentColor;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 1.7;
+    }
+
+    .offer-card:nth-child(2) .offer-icon {
+      border-color: #cce7e5;
+      background: #e8f5f3;
+      color: #16818a;
+    }
+
     .offer-card p {
       margin-bottom: 18px;
       color: rgba(231, 237, 240, 0.76);
@@ -898,7 +937,33 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
     }
 
     .service-slide .signal-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       margin-bottom: 18px;
+    }
+
+    .service-slide .signal-pill svg {
+      width: 17px;
+      height: 17px;
+      flex: 0 0 17px;
+      fill: none;
+      stroke: currentColor;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 1.7;
+    }
+
+    .service-slide .service-icon-whatsapp {
+      color: #198754;
+    }
+
+    .service-slide .service-icon-telegram {
+      color: #287fbd;
+    }
+
+    .service-slide .service-icon-n8n {
+      color: #c45b35;
     }
 
     .service-slide h3 {
@@ -1044,31 +1109,46 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
           </div>
           <div class="service-slides" id="service-slides" aria-live="off">
             <article class="service-slide is-active" data-service-slide role="group" aria-roledescription="slide" aria-label="1 of 5" aria-hidden="false">
-              <span class="signal-pill">AI Calling Agent</span>
+              <span class="signal-pill">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.75h2.2l1.2 3.1-1.7 1.45a14.7 14.7 0 0 0 6 6l1.45-1.7 3.1 1.2V16a2 2 0 0 1-2.2 2A14.8 14.8 0 0 1 6 7.95a2 2 0 0 1 1-4.2Z"/><path d="M14.5 4.5a5 5 0 0 1 5 5M14.5 7.5a2 2 0 0 1 2 2"/></svg>
+                AI Calling Agent
+              </span>
               <h3>Every call, handled.</h3>
               <p>Answer customers 24/7, qualify requests, capture details, and book appointments with a natural voice agent.</p>
               <div class="service-tags"><span>Phone support</span><span>Lead intake</span><span>Appointment booking</span></div>
             </article>
             <article class="service-slide" data-service-slide role="group" aria-roledescription="slide" aria-label="2 of 5" aria-hidden="true">
-              <span class="signal-pill">WhatsApp AI Bots</span>
+              <span class="signal-pill">
+                <svg class="service-icon-whatsapp" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.4-4A8 8 0 1 1 20 11.5Z"/><path d="M9 8.5c.3 2.6 2 4.4 4.6 5l1.2-1.1 2 .8v1a1 1 0 0 1-1 1.1A8 8 0 0 1 8 8.7a1 1 0 0 1 1-.9Z"/></svg>
+                WhatsApp AI Bots
+              </span>
               <h3>Turn chats into action.</h3>
               <p>Custom WhatsApp bots can answer common questions, collect lead details, and route conversations to the right person.</p>
               <div class="service-tags"><span>Customer support</span><span>Lead qualification</span><span>Instant replies</span></div>
             </article>
             <article class="service-slide" data-service-slide role="group" aria-roledescription="slide" aria-label="3 of 5" aria-hidden="true">
-              <span class="signal-pill">Telegram AI Bots</span>
+              <span class="signal-pill">
+                <svg class="service-icon-telegram" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 11.4 17-7-4.4 16-4.3-5.2-3 2.5.4-5.1L18 7.2l-11.2 5.9L3 11.4Z"/><path d="m11.3 15.2 3.3 5.2"/></svg>
+                Telegram AI Bots
+              </span>
               <h3>Automate your Telegram flow.</h3>
               <p>Build custom Telegram bots for support, notifications, information lookup, and useful AI-powered conversations.</p>
               <div class="service-tags"><span>Custom commands</span><span>Smart responses</span><span>Notifications</span></div>
             </article>
             <article class="service-slide" data-service-slide role="group" aria-roledescription="slide" aria-label="4 of 5" aria-hidden="true">
-              <span class="signal-pill">n8n AI Automation</span>
+              <span class="signal-pill">
+                <svg class="service-icon-n8n" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10M7 17h10M7 7v10M17 7v10"/><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><circle cx="12" cy="12" r="2"/></svg>
+                n8n AI Automation
+              </span>
               <h3>Connect the work behind the scenes.</h3>
               <p>AI-powered n8n workflows connect your apps and automate repetitive tasks, follow-ups, and multi-step business processes.</p>
               <div class="service-tags"><span>App integrations</span><span>Workflow automation</span><span>AI-assisted tasks</span></div>
             </article>
             <article class="service-slide" data-service-slide role="group" aria-roledescription="slide" aria-label="5 of 5" aria-hidden="true">
-              <span class="signal-pill">Custom AI Agents</span>
+              <span class="signal-pill">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z"/><path d="m19 15 .9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9L19 15Z"/></svg>
+                Custom AI Agents
+              </span>
               <h3>Purpose-built for your process.</h3>
               <p>Purpose-built AI agents can support specific business tasks and connect with selected tools, based on an agreed scope.</p>
               <div class="service-tags"><span>Task-specific</span><span>Selected integrations</span><span>Scoped build</span></div>
@@ -1095,15 +1175,21 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
       </div>
       <div class="offer-grid">
         <article class="offer-card">
-          <span class="offer-badge">Starting at $99/month</span>
-          <h3>Autonomous AI Voice Executive</h3>
+          <span class="offer-badge">Starting at $50/month</span>
+          <div class="offer-title">
+            <span class="offer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13a7 7 0 0 1 14 0"/><path d="M5 13v4a2 2 0 0 0 2 2h1v-6H5ZM19 13v4a2 2 0 0 1-2 2h-1v-6h3Z"/><path d="M10 19h4"/></svg></span>
+            <h3>Autonomous AI Voice Executive</h3>
+          </div>
           <p>Answer incoming calls around the clock with an AI agent that handles customer intake, common questions, service requests, and appointment booking.</p>
           <div class="tags"><span>24/7 call answering</span><span>Customer intake</span><span>Appointment booking</span></div>
           <a class="offer-link" href="#voice-demo">Request a voice agent demo <span aria-hidden="true">↗</span></a>
         </article>
         <article class="offer-card" id="ai-services">
           <span class="offer-badge">One-time custom projects</span>
-          <h3>Bots, workflows &amp; AI agents</h3>
+          <div class="offer-title">
+            <span class="offer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="12" cy="18" r="2"/><path d="M7 7.2 10.8 16M17 7.2 13.2 16M7 6h10"/></svg></span>
+            <h3>Bots, workflows &amp; AI agents</h3>
+          </div>
           <p>Build WhatsApp and Telegram bots, AI-powered n8n workflows, and task-specific AI agents around the tools and processes your business already uses.</p>
           <div class="tags"><span>WhatsApp &amp; Telegram</span><span>n8n automation</span><span>Custom AI agents</span></div>
           <p class="offer-scope">Project scope, integrations, and final pricing are confirmed during a consultation. Terms &amp; conditions apply.</p>
@@ -1143,7 +1229,7 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
         <article class="pricing-card featured">
           <span class="pricing-label">AI Calling Agent · SaaS</span>
           <h3>Starter</h3>
-          <span class="price">$99<small>/mo</small></span>
+          <span class="price">$50<small>/mo</small></span>
           <p class="pricing-frequency">Monthly subscription</p>
           <p>Up to 100 calls/mo, basic intake, SMS summaries, and calendar sync.</p>
           <ul>
@@ -1156,7 +1242,7 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
         <article class="pricing-card">
           <span class="pricing-label">AI Calling Agent · SaaS</span>
           <h3>Pro</h3>
-          <span class="price">$299<small>/mo</small></span>
+          <span class="price">$140<small>/mo</small></span>
           <p class="pricing-frequency">Monthly subscription</p>
           <p>Up to 500 calls/mo, emergency escalation routing, and full CRM integration.</p>
           <ul>
