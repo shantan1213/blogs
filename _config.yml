@@ -1,5 +1,5 @@
-title: Shantan Yeddula | Engineering Notes
-description: Shantan Yeddula's personal homepage and conversational notes on Java, Spring Boot, backend development, and platform engineering.
+title: PlatformDaemon | AI Voice Agents & Automation
+description: PlatformDaemon provides enterprise-grade AI automation and hyper-realistic AI voice agents for local businesses, contractors, and property managers.
 url: https://www.platformdaemon.tech
 baseurl: ""
 theme: minima
@@ -8,6 +8,5 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 header_pages:
-  - journal/index.html
   - about.md
   - archive.md

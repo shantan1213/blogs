@@ -1,20 +1,19 @@
 ---
 layout: page
-title: About
+title: About PlatformDaemon
 permalink: /about/
 ---
 
-Hey, I’m **Shantan Yeddula**—a software engineer working across Java backend
-development and platform engineering.
+**PlatformDaemon** is an AI automation company designed for local businesses,
+contractors, and property managers who need enterprise-grade tools without the
+enterprise price tag.
 
-At HCLTech, I’ve worked on Spring Boot REST APIs, cloud-native applications,
-reusable GitHub Actions workflows, and database delivery with Liquibase. I’ve
-also worked with Azure Kubernetes Service, OpenShift, Docker, and Linux.
+We build AI voice agents and automation workflows that handle customer intake,
+service triage, lead follow-up, and scheduling—without bloated retainers or
+confusing implementation packages.
 
-This blog is my place to share what I learn while building things. Right now,
-that includes a Spring Boot request proxy, two backend services, and my journey
-toward making the proxy a real load balancer.
+Our mission is simple: provide fast, transparent, affordable AI systems that
+help growing businesses respond faster, convert more leads, and stay available
+24/7.
 
-[More about me and my projects](https://blogs.platformdaemon.tech/) ·
-[GitHub](https://github.com/shantan1213) ·
-[Resume](https://blogs.platformdaemon.tech/assets/Shantan-Yeddula-Resume.pdf)
+[Get Started](#pricing) · [Contact Support](mailto:support@platformdaemon.tech)

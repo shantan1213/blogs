@@ -1,163 +1,733 @@
 ---
 layout: null
-title: Shantan Yeddula | Java & Platform Engineer
-description: PlatformDaemon is Shantan Yeddula's personal website and blog about Java backend engineering, platform work, and projects.
+title: PlatformDaemon | Enterprise AI for Growing Businesses
+description: PlatformDaemon provides enterprise-grade AI automation and autonomous AI voice agents designed for local businesses, contractors, and property managers.
 ---
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="PlatformDaemon is Shantan Yeddula's personal website and blog: projects, notes, and what he's learning about Java and platform engineering.">
-  <meta name="theme-color" content="#f6f7f3">
-  <title>Shantan Yeddula | Java &amp; Platform Engineer</title>
+  <meta name="description" content="PlatformDaemon provides enterprise-grade AI automation and hyper-realistic AI voice agents for local businesses, contractors, and property managers.">
+  <meta name="theme-color" content="#081722">
+  <title>PlatformDaemon | Enterprise AI for Growing Businesses</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/home.css?v=fa138e6">
+  <style>
+    body {
+      background: #071b2b;
+      color: #edf7ff;
+    }
+
+    .site-header,
+    .site-footer {
+      background: rgba(7, 27, 43, 0.9);
+      border-color: rgba(120, 154, 177, 0.28);
+      backdrop-filter: blur(18px);
+    }
+
+    .wordmark,
+    .site-header nav a,
+    .site-header .nav-cta,
+    .hero-copy,
+    .hero-intro,
+    .offer-card,
+    .offer-card p,
+    .demo-copy p,
+    .demo-meta,
+    .pricing-card,
+    .pricing-card p,
+    .footer-inner p,
+    .footer-links a,
+    .reason-copy p,
+    .reason-copy li,
+    .cta-copy p {
+      color: #edf7ff;
+    }
+
+    .wordmark span,
+    .accent,
+    .tech-dot {
+      color: #5eead4;
+    }
+
+    .site-header nav a {
+      color: rgba(237, 247, 255, 0.8);
+    }
+
+    .site-header nav a:hover,
+    .hero-links a:hover,
+    .contact-links a:hover,
+    .footer-links a:hover {
+      color: #8ef3e2;
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 18px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #0ea5e9, #14b8a6);
+      color: #041821;
+      font-weight: 800;
+      box-shadow: 0 12px 34px rgba(14, 165, 233, 0.35);
+    }
+
+    .hero {
+      min-height: 620px;
+      padding-top: 28px;
+      padding-bottom: 60px;
+    }
+
+    .eyebrow {
+      color: #8fe3d3;
+      letter-spacing: 0.16em;
+    }
+
+    .status-dot {
+      background: #5eead4;
+      box-shadow: 0 0 0 5px rgba(94, 234, 212, 0.18);
+    }
+
+    .hero-copy h1 {
+      max-width: 720px;
+      letter-spacing: -0.06em;
+    }
+
+    .hero-intro {
+      max-width: 540px;
+      font-size: 16px;
+      line-height: 1.8;
+      color: rgba(237, 247, 255, 0.8);
+    }
+
+    .hero-actions .button-dark {
+      background: linear-gradient(135deg, #0ea5e9, #14b8a6);
+      color: #041821;
+      border: none;
+      box-shadow: 0 12px 34px rgba(20, 184, 166, 0.22);
+    }
+
+    .hero-actions .button-light {
+      border-color: rgba(143, 227, 211, 0.4);
+      background: rgba(9, 25, 38, 0.9);
+      color: #edf7ff;
+    }
+
+    .hero-links a {
+      color: rgba(237, 247, 255, 0.8);
+    }
+
+    .hero-visual {
+      display: grid;
+      place-items: center;
+      position: relative;
+      min-height: 420px;
+    }
+
+    .signal-card {
+      position: relative;
+      width: min(390px, 100%);
+      padding: 28px 22px 22px;
+      border: 1px solid rgba(143, 227, 211, 0.2);
+      border-radius: 26px;
+      background: linear-gradient(180deg, rgba(15, 35, 51, 0.96), rgba(12, 23, 35, 0.9));
+      box-shadow: 0 30px 60px rgba(5, 15, 26, 0.7);
+    }
+
+    .signal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 18px;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #9bdedb;
+    }
+
+    .signal-dots {
+      display: flex;
+      gap: 8px;
+    }
+
+    .signal-dots span {
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(148, 163, 184, 0.7);
+    }
+
+    .signal-dots span:first-child { background: #f87171; }
+    .signal-dots span:nth-child(2) { background: #fbbf24; }
+    .signal-dots span:nth-child(3) { background: #34d399; }
+
+    .signal-body {
+      background: rgba(8, 27, 43, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.18);
+      border-radius: 18px;
+      padding: 18px;
+    }
+
+    .signal-pill {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(94, 234, 212, 0.12);
+      border: 1px solid rgba(94, 234, 212, 0.26);
+      color: #b0f5eb;
+      font: 500 10px var(--mono);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .signal-body h3 {
+      margin-bottom: 12px;
+      font-size: clamp(25px, 2.3vw, 34px);
+      letter-spacing: -0.05em;
+      color: white;
+    }
+
+    .signal-body p {
+      margin-bottom: 18px;
+      color: rgba(237, 247, 255, 0.8);
+      line-height: 1.7;
+    }
+
+    .signal-bars {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      align-items: end;
+      gap: 7px;
+      height: 90px;
+    }
+
+    .signal-bars span {
+      display: block;
+      border-radius: 999px 999px 0 0;
+      background: linear-gradient(180deg, #5eead4, #0ea5e9);
+      opacity: 0.9;
+    }
+
+    .offer-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 26px;
+      margin-top: 18px;
+    }
+
+    .offer-card {
+      padding: 28px 28px 20px;
+      border: 1px solid rgba(146, 180, 211, 0.18);
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(9, 29, 42, 0.95), rgba(10, 22, 35, 0.85));
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+    }
+
+    .offer-badge {
+      display: inline-block;
+      margin-bottom: 16px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(94, 234, 212, 0.1);
+      color: #b6f4ea;
+      border: 1px solid rgba(94, 234, 212, 0.16);
+      font: 500 10px var(--mono);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .offer-card h3 {
+      margin-bottom: 12px;
+      font-size: clamp(24px, 2vw, 32px);
+      letter-spacing: -0.05em;
+    }
+
+    .offer-card p {
+      margin-bottom: 18px;
+      color: rgba(237, 247, 255, 0.8);
+      line-height: 1.75;
+    }
+
+    .audio-demo {
+      margin-top: 32px;
+      padding: 32px 30px;
+      border: 1px solid rgba(146, 180, 211, 0.18);
+      border-radius: 28px;
+      background: linear-gradient(180deg, rgba(12, 31, 45, 0.96), rgba(8, 20, 31, 0.94));
+    }
+
+    .audio-demo h2,
+    .why-us h2,
+    .pricing h2 {
+      letter-spacing: -0.06em;
+    }
+
+    .demo-layout {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 28px;
+      align-items: center;
+      margin-top: 22px;
+    }
+
+    .demo-copy p {
+      max-width: 560px;
+      color: rgba(237, 247, 255, 0.82);
+      line-height: 1.8;
+    }
+
+    .demo-player {
+      display: grid;
+      gap: 18px;
+      padding: 18px 18px 16px;
+      border-radius: 22px;
+      border: 1px solid rgba(146, 180, 211, 0.18);
+      background: rgba(2, 18, 30, 0.74);
+    }
+
+    .player-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .play-btn {
+      width: 48px;
+      height: 48px;
+      border: none;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #14b8a6, #0ea5e9);
+      color: #041821;
+      font-size: 18px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .player-title {
+      flex: 1;
+      display: grid;
+      gap: 4px;
+    }
+
+    .player-title strong,
+    .player-title span {
+      display: block;
+    }
+
+    .player-title span {
+      color: rgba(237, 247, 255, 0.68);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .waveform {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 5px;
+      height: 82px;
+      padding: 12px 10px 8px;
+      border-radius: 12px;
+      background: rgba(8, 27, 43, 0.9);
+    }
+
+    .waveform span {
+      display: block;
+      width: 7px;
+      border-radius: 999px 999px 0 0;
+      background: linear-gradient(180deg, #5eead4, #0ea5e9);
+      animation: pulse 1.2s ease-in-out infinite alternate;
+    }
+
+    @keyframes pulse {
+      0% { transform: scaleY(0.5); opacity: 0.7; }
+      100% { transform: scaleY(1); opacity: 1; }
+    }
+
+    .waveform span:nth-child(2n) { animation-delay: .12s; }
+    .waveform span:nth-child(3n) { animation-delay: .24s; }
+    .waveform span:nth-child(4n) { animation-delay: .36s; }
+
+    .demo-meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      color: rgba(237, 247, 255, 0.74);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .why-us {
+      margin-top: 36px;
+      padding: 34px 0 12px;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .reason-copy {
+      padding: 28px 26px;
+      border: 1px solid rgba(146, 180, 211, 0.18);
+      border-radius: 22px;
+      background: rgba(10, 20, 31, 0.65);
+    }
+
+    .reason-copy p {
+      color: rgba(237, 247, 255, 0.8);
+      line-height: 1.85;
+    }
+
+    .reason-copy ul {
+      margin: 18px 0 0;
+      padding-left: 20px;
+      color: rgba(237, 247, 255, 0.82);
+      line-height: 1.9;
+    }
+
+    .pricing {
+      margin-top: 30px;
+      padding-top: 30px;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+      margin-top: 22px;
+    }
+
+    .pricing-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      padding: 28px 24px;
+      border-radius: 22px;
+      border: 1px solid rgba(146, 180, 211, 0.18);
+      background: rgba(10, 20, 31, 0.7);
+    }
+
+    .pricing-card.featured {
+      background: linear-gradient(180deg, rgba(14, 165, 233, 0.18), rgba(8, 24, 38, 0.9));
+      border-color: rgba(94, 234, 212, 0.28);
+    }
+
+    .pricing-card h3 {
+      font-size: 26px;
+      letter-spacing: -0.05em;
+      margin-bottom: 8px;
+    }
+
+    .pricing-card .price {
+      display: block;
+      margin-bottom: 12px;
+      font-size: 36px;
+      font-weight: 800;
+      letter-spacing: -0.05em;
+      color: white;
+    }
+
+    .pricing-card p,
+    .pricing-card li {
+      color: rgba(237, 247, 255, 0.8);
+      line-height: 1.8;
+    }
+
+    .pricing-card ul {
+      margin: 18px 0 0;
+      padding-left: 20px;
+      color: rgba(237, 247, 255, 0.82);
+      line-height: 1.9;
+    }
+
+    .pricing-card .button {
+      margin-top: auto;
+      justify-content: center;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #edf7ff;
+      font-weight: 800;
+    }
+
+    .footer-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      color: rgba(237, 247, 255, 0.78);
+    }
+
+    @media (max-width: 860px) {
+      .site-header nav {
+        gap: 12px;
+      }
+
+      .hero,
+      .demo-layout,
+      .why-grid,
+      .pricing-grid,
+      .offer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 40px;
+      }
+
+      .hero-art {
+        order: -1;
+      }
+
+      .signal-card {
+        width: min(340px, 100%);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .shell { width: min(100% - 28px, 560px); }
+      .site-header {
+        padding-inline: 12px;
+      }
+      .site-header nav {
+        display: none;
+      }
+      .hero {
+        min-height: auto;
+      }
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .hero-actions .button,
+      .nav-cta {
+        width: 100%;
+      }
+      .demo-player,
+      .offer-card,
+      .reason-copy,
+      .pricing-card {
+        padding: 20px 16px;
+      }
+      .audio-demo {
+        padding: 22px 16px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
-    <a class="wordmark" href="#top" aria-label="Shantan Yeddula home">sy<span>.</span></a>
-    <nav aria-label="Main navigation">
-      <a href="#intro">Intro</a>
-      <a href="#projects">Projects</a>
-      <a href="/journal/">Blog</a>
-      <a class="nav-resume" href="/assets/Shantan-Yeddula-Resume.pdf" target="_blank" rel="noopener">Resume <span aria-hidden="true">↗</span></a>
-    </nav>
+    <div class="shell" style="display:flex;align-items:center;justify-content:space-between;gap:24px;">
+      <a class="wordmark" href="#top" aria-label="PlatformDaemon home">PlatformDaemon<span class="tech-dot">.tech</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#voice-agent">Voice Agent</a>
+        <a href="#ai-services">AI Services</a>
+        <a href="#why-us">Why Us</a>
+        <a href="#pricing">Pricing</a>
+      </nav>
+      <a class="nav-cta" href="#pricing">Get Started</a>
+    </div>
   </header>
 
   <main id="top">
     <section class="hero shell" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="status-dot"></span> JAVA BACKEND · PLATFORM ENGINEERING</p>
-        <h1 id="hero-title">Hey, I’m Shantan<span class="accent">.</span><br>I like making the<br><span class="serif">behind-the-scenes</span><br>stuff work.</h1>
-        <p class="hero-intro">I work across Java backend and platform engineering. Here I share projects and lessons from backend development, DevOps, cloud, and automation—plus the occasional bug that was supposed to be a five-minute fix.</p>
+        <p class="eyebrow"><span class="status-dot"></span> NEXT-GEN AI FOR GROWING BUSINESSES</p>
+        <h1 id="hero-title">Enterprise AI Power.<br>Local Business Pricing.</h1>
+        <p class="hero-intro">Never miss a customer call again. Deploy hyper-realistic AI voice agents and custom automation workflows with PlatformDaemon—starting at a fraction of a human receptionist.</p>
         <div class="hero-actions">
-          <a class="button button-dark" href="#intro">A little about me <span aria-hidden="true">↓</span></a>
-          <a class="button button-light" href="/journal/">Read what I’m building <span aria-hidden="true">↗</span></a>
+          <a class="button button-dark" href="#voice-agent">Listen to AI Voice Demo <span aria-hidden="true">↓</span></a>
+          <a class="button button-light" href="#ai-services">Explore AI Services <span aria-hidden="true">↗</span></a>
         </div>
         <div class="hero-links" aria-label="Social and contact links">
-          <a href="https://github.com/shantan1213" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.1.76-.24.76-.53v-2.08c-3.1.68-3.75-1.32-3.75-1.32-.5-1.3-1.24-1.65-1.24-1.65-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15 1 .1.76 1.83 3.36 1.3.1-.72.39-1.21.7-1.49-2.48-.28-5.09-1.24-5.09-5.52 0-1.22.44-2.22 1.15-3-.12-.28-.5-1.42.1-2.96 0 0 .94-.3 3.05 1.14a10.6 10.6 0 0 1 5.55 0c2.12-1.44 3.05-1.14 3.05-1.14.6 1.54.22 2.68.11 2.96.71.78 1.14 1.78 1.14 3 0 4.29-2.61 5.23-5.1 5.5.4.35.75 1.02.75 2.06V22c0 .29.2.64.77.53A11.1 11.1 0 0 0 12 .9Z"/></svg>
-            GitHub
-          </a>
-          <a href="mailto:shantanyeddula125@gmail.com">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 5.5h17v13h-17z"/><path d="m4 6 8 6 8-6"/></svg>
-            Say hello
-          </a>
+          <a href="mailto:support@platformdaemon.tech">support@platformdaemon.tech</a>
+          <a href="#pricing">Book a consultation</a>
         </div>
       </div>
-      <div class="hero-art">
-        <div class="photo-frame">
-          <img src="/assets/shantan-yeddula.jpg" alt="Illustrated portrait of Shantan Yeddula">
+      <div class="hero-art hero-visual" aria-hidden="true">
+        <div class="signal-card">
+          <div class="signal-header">
+            <span>Live Operations</span>
+            <div class="signal-dots"><span></span><span></span><span></span></div>
+          </div>
+          <div class="signal-body">
+            <span class="signal-pill">AI voice executive</span>
+            <h3>24/7 customer intake</h3>
+            <p>Instant call triage, FAQ handling, appointment booking, and emergency routing for service businesses.</p>
+            <div class="signal-bars">
+              <span style="height:26%"></span>
+              <span style="height:38%"></span>
+              <span style="height:62%"></span>
+              <span style="height:90%"></span>
+              <span style="height:48%"></span>
+              <span style="height:78%"></span>
+              <span style="height:100%"></span>
+              <span style="height:56%"></span>
+              <span style="height:84%"></span>
+              <span style="height:52%"></span>
+              <span style="height:70%"></span>
+              <span style="height:66%"></span>
+            </div>
+          </div>
         </div>
-        <div class="photo-note"><span class="note-star" aria-hidden="true">✳</span><span>Curious by default.<br>Building as I learn.</span></div>
-        <span class="orbit orbit-one" aria-hidden="true"></span>
-        <span class="orbit orbit-two" aria-hidden="true"></span>
       </div>
-      <a class="scroll-cue" href="#intro"><span aria-hidden="true">↓</span> A BIT MORE ABOUT ME</a>
     </section>
 
-    <section class="intro-section section-pad" id="intro" aria-labelledby="intro-title">
-      <div class="shell intro-grid">
+    <section class="shell section-pad" id="voice-agent">
+      <div class="section-heading" style="margin-bottom: 22px;">
         <div>
-          <p class="eyebrow">01 — INTRO</p>
-          <h2 id="intro-title">Backend by trade.<br><span class="serif">Platform-minded.</span></h2>
-        </div>
-        <div class="intro-copy">
-          <p>I’m a Software Engineer at HCLTech, working across backend applications and the platforms that help teams ship them. That means Java APIs, Spring Boot, and modernizing older Spring applications—because apparently software can outlive several generations of “temporary” solutions.</p>
-          <p>I’ve also worked with reusable GitHub Actions workflows, Liquibase deployment pipelines, and cloud environments including Azure Kubernetes Service and OpenShift. I like making the whole path from code to deployment work smoothly; ideally, nobody has to sacrifice an afternoon to discover one missing setting.</p>
-          <p>PlatformDaemon is where I write about the things I build and learn: backend systems, DevOps, cloud, automation, and platform engineering. Expect practical notes, honest lessons, and the occasional reminder that reading the error message was, in fact, the right first step.</p>
-          <div class="career-note">
-            <span class="career-mark" aria-hidden="true">H</span>
-            <span><strong>Software Engineer · HCLTech</strong><small>Backend development &amp; platform engineering · Dec 2024—Present</small></span>
-          </div>
+          <p class="eyebrow">THE TWO CORE OFFERINGS</p>
+          <h2>Built to keep your business moving.</h2>
         </div>
       </div>
-    </section>
-
-    <section class="projects-section section-pad" id="projects" aria-labelledby="projects-title">
-      <div class="shell">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">02 — CURRENTLY BUILDING</p>
-            <h2 id="projects-title">A project I’m <span class="serif">learning from.</span></h2>
-          </div>
-          <p class="heading-note">Small steps, real code, and plenty left to figure out.</p>
-        </div>
-        <article class="project-card">
-          <div class="project-icon" aria-hidden="true">
-            <svg viewBox="0 0 48 48"><rect x="5" y="7" width="15" height="12" rx="3"/><rect x="28" y="29" width="15" height="12" rx="3"/><rect x="5" y="29" width="15" height="12" rx="3"/><path d="M20 13h7a5 5 0 0 1 5 5v11M20 35h4"/></svg>
-          </div>
-          <div class="project-info">
-            <p class="eyebrow">SPRING BOOT · JAVA · H2</p>
-            <h3>Custom Load Balancer</h3>
-            <p>A hands-on project exploring how a proxy can route requests across Spring Boot backends, with create/update APIs and H2 persistence. It’s a work in progress—which is a polite way of saying there’s always another edge case waiting.</p>
-            <div class="tags"><span>Spring Boot</span><span>REST APIs</span><span>Spring Data JPA</span><span>H2</span></div>
-          </div>
-          <a class="project-link" href="https://github.com/shantan1213/custom-loadBalancer" target="_blank" rel="noopener" aria-label="View the custom load balancer on GitHub"><span aria-hidden="true">↗</span></a>
+      <div class="offer-grid">
+        <article class="offer-card">
+          <span class="offer-badge">Starting at $99/month</span>
+          <h3>Autonomous AI Voice Executive</h3>
+          <p>Talks to customers with a warm, natural, human tone. Handles intake, answers FAQs, diagnoses maintenance or service issues, and books appointments 24/7.</p>
+          <div class="tags"><span>Live call intake</span><span>FAQ automation</span><span>Booking flow</span></div>
         </article>
-        <div class="more-projects">
-          <a class="mini-project" href="https://github.com/shantan1213/backend" target="_blank" rel="noopener">
-            <span class="mini-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5.5h16v13H4zM8 9h8M8 12h8M8 15h5"/></svg></span>
-            <span><strong>Backend 1</strong><small>REST API · JPA · H2</small></span><span class="mini-arrow" aria-hidden="true">↗</span>
-          </a>
-          <a class="mini-project" href="https://github.com/shantan1213/backend2" target="_blank" rel="noopener">
-            <span class="mini-icon mini-icon-blue" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5.5h16v13H4zM8 9h8M8 12h8M8 15h5"/></svg></span>
-            <span><strong>Backend 2</strong><small>REST API · JPA · H2</small></span><span class="mini-arrow" aria-hidden="true">↗</span>
-          </a>
+        <article class="offer-card" id="ai-services">
+          <span class="offer-badge">Transparent fixed-price packages</span>
+          <h3>Tailored AI Automated Services</h3>
+          <p>Custom workflows, instant lead follow-up systems, smart scheduling bots, and document processing built specifically for local business operations.</p>
+          <div class="tags"><span>Lead follow-up</span><span>CRM sync</span><span>Workflow automation</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="shell audio-demo section-pad" aria-labelledby="demo-title">
+      <p class="eyebrow">INTERACTIVE DEMO</p>
+      <h2 id="demo-title">Hear the PlatformDaemon Difference</h2>
+      <div class="demo-layout">
+        <div class="demo-copy">
+          <p>Listen to how naturally our AI customer executive handles a live service booking or maintenance triage call.</p>
+        </div>
+        <div class="demo-player" aria-label="Sample AI voice call preview">
+          <div class="player-top">
+            <button class="play-btn" type="button" aria-label="Play audio demo">▶</button>
+            <div class="player-title">
+              <strong>Sample Call: Urgent Maintenance Triage</strong>
+              <span>PlatformDaemon AI</span>
+            </div>
+          </div>
+          <div class="waveform" aria-hidden="true">
+            <span style="height:30%"></span>
+            <span style="height:45%"></span>
+            <span style="height:63%"></span>
+            <span style="height:82%"></span>
+            <span style="height:58%"></span>
+            <span style="height:92%"></span>
+            <span style="height:76%"></span>
+            <span style="height:87%"></span>
+            <span style="height:43%"></span>
+            <span style="height:70%"></span>
+            <span style="height:54%"></span>
+            <span style="height:91%"></span>
+            <span style="height:68%"></span>
+            <span style="height:80%"></span>
+            <span style="height:52%"></span>
+            <span style="height:60%"></span>
+            <span style="height:72%"></span>
+          </div>
+          <div class="demo-meta">
+            <span>00:32</span>
+            <span>AI VIRTUAL CALL</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="toolbox-section section-pad" aria-labelledby="toolbox-title">
-      <div class="shell toolbox-grid">
-        <div>
-          <p class="eyebrow">03 — MY TOOLBOX</p>
-          <h2 id="toolbox-title">A few things<br>I work <span class="serif">with.</span></h2>
-          <p class="toolbox-intro">Tools I’ve used at work and in the projects I’m building. Always learning something new.</p>
+    <section class="why-us shell section-pad" id="why-us" aria-labelledby="why-title">
+      <p class="eyebrow">WHY PLATFORMDAEMON</p>
+      <h2 id="why-title">How We Deliver Premium AI at Unbeatable Prices</h2>
+      <div class="why-grid" style="margin-top:24px;">
+        <div class="reason-copy">
+          <p>Traditional tech agencies charge bloated retainers and enterprise software fees. At PlatformDaemon, we leverage cutting-edge open-source architecture and optimized automation loops to eliminate overhead—passing those massive savings directly to growing businesses.</p>
         </div>
-        <div class="toolbox">
-          <div><span class="tool-icon tool-java">☕</span><span><strong>Java &amp; Spring</strong><small>Spring Boot · Spring MVC · REST</small></span></div>
-          <div><span class="tool-icon tool-cloud">☁</span><span><strong>Cloud &amp; Platform</strong><small>Azure · AKS · OpenShift · Docker</small></span></div>
-          <div><span class="tool-icon tool-ci">⟳</span><span><strong>CI/CD &amp; Delivery</strong><small>GitHub Actions · Liquibase · Maven</small></span></div>
-          <div><span class="tool-icon tool-data">◫</span><span><strong>Data &amp; Quality</strong><small>MySQL · PostgreSQL · SonarQube</small></span></div>
+        <div class="reason-copy">
+          <ul>
+            <li>Open-source-first implementation for faster deployment.</li>
+            <li>Transparent, fixed pricing without hidden implementation fees.</li>
+            <li>Built specifically for local service businesses and property operations.</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <section class="notes-section section-pad" aria-labelledby="notes-title">
-      <div class="shell notes-card">
-        <div class="notes-icon" aria-hidden="true">
-          <svg viewBox="0 0 48 48"><path d="M12 8h18l7 7v25H12z"/><path d="M29 8v8h8M18 24h13M18 30h13M18 36h8"/></svg>
-        </div>
-        <div>
-          <p class="eyebrow">04 — NOTES, FIXES &amp; OCCASIONAL PLOT TWISTS</p>
-          <h2 id="notes-title">I’m writing it down<br><span class="serif">as I go.</span></h2>
-          <p>Expect backend builds, DevOps experiments, cloud and platform notes, and the occasional detour caused by one tiny config value with main-character energy. Not a textbook—just what I tried, what broke, and what I learned.</p>
-        </div>
-        <a class="button button-dark" href="/journal/">Read the engineering blog <span aria-hidden="true">↗</span></a>
-      </div>
-    </section>
-
-    <section class="contact-section section-pad" id="contact" aria-labelledby="contact-title">
-      <div class="shell contact-inner">
-        <p class="eyebrow">05 — YOUR TURN</p>
-        <h2 id="contact-title">Have a good idea?<br><span class="serif">Let’s talk.</span></h2>
-        <p>I’m always happy to chat about Java, backend engineering, DevOps, cloud, platform work—or the mysterious ways a perfectly good build can fail on Friday.</p>
-        <a class="button button-dark" href="mailto:shantanyeddula125@gmail.com">Email me <span aria-hidden="true">↗</span></a>
-        <div class="contact-links">
-          <a href="https://github.com/shantan1213" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
-          <a href="/assets/Shantan-Yeddula-Resume.pdf" target="_blank" rel="noopener">Resume <span aria-hidden="true">↗</span></a>
-          <a href="/journal/">Engineering blog <span aria-hidden="true">↗</span></a>
-        </div>
+    <section class="pricing shell section-pad" id="pricing" aria-labelledby="pricing-title">
+      <p class="eyebrow">TRANSPARENT PRICING</p>
+      <h2 id="pricing-title">Simple plans for smarter operations.</h2>
+      <div class="pricing-grid">
+        <article class="pricing-card featured">
+          <h3>Starter</h3>
+          <span class="price">$99<span style="font-size:18px;">/mo</span></span>
+          <p>Up to 100 calls/mo, basic intake, SMS summaries, and calendar sync.</p>
+          <ul>
+            <li>Call routing</li>
+            <li>SMS summaries</li>
+            <li>Calendar sync</li>
+          </ul>
+        </article>
+        <article class="pricing-card">
+          <h3>Pro</h3>
+          <span class="price">$299<span style="font-size:18px;">/mo</span></span>
+          <p>Up to 500 calls/mo, emergency escalation routing, and full CRM integration.</p>
+          <ul>
+            <li>CRM integration</li>
+            <li>Escalation logic</li>
+            <li>Priority workflows</li>
+          </ul>
+        </article>
+        <article class="pricing-card">
+          <h3>Custom Services</h3>
+          <span class="price">Custom</span>
+          <p>Tailored automation builds and service workflows customized to your business.</p>
+          <ul>
+            <li>Custom project quotes</li>
+            <li>No hidden retainer fees</li>
+            <li>Flexible implementation</li>
+          </ul>
+        </article>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="shell footer-inner"><a class="wordmark" href="#top">sy<span>.</span></a><p>Made with curiosity by Shantan Yeddula.</p><a href="#top">Back to top ↑</a></div>
+    <div class="shell footer-inner">
+      <div class="footer-brand">PlatformDaemon<span class="tech-dot">.tech</span></div>
+      <div class="footer-links">
+        <a href="mailto:support@platformdaemon.tech">support@platformdaemon.tech</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Client Login</a>
+      </div>
+      <p>Intelligent Automation &amp; Voice Agents</p>
+    </div>
   </footer>
 </body>
 </html>
