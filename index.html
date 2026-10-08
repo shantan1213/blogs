@@ -99,11 +99,11 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
 
     .hero {
       width: min(1280px, calc(100% - 64px));
-      min-height: 620px;
+      min-height: 540px;
       grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
-      gap: 56px;
-      padding-top: 28px;
-      padding-bottom: 60px;
+      gap: clamp(32px, 5vw, 64px);
+      padding-top: 24px;
+      padding-bottom: 44px;
     }
 
     .eyebrow {
@@ -166,7 +166,7 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
       display: grid;
       place-items: center;
       position: relative;
-      min-height: 420px;
+      min-height: 0;
     }
 
     .signal-card {
@@ -187,6 +187,8 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
       font-size: 11px;
       letter-spacing: 0.12em;
       text-transform: uppercase;
+      max-width: 100%;
+      white-space: normal;
       color: #abc8b9;
     }
 
@@ -395,22 +397,24 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
     }
 
     .pricing {
-      margin-top: 30px;
-      padding-top: 30px;
+      margin-top: 16px;
+      padding-top: 24px;
     }
 
     .pricing-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 24px;
-      margin-top: 30px;
+      gap: clamp(16px, 2vw, 24px);
+      margin-top: 24px;
+      min-width: 0;
     }
 
     .pricing-card {
       display: flex;
       flex-direction: column;
-      min-height: 390px;
-      padding: 30px 26px 26px;
+      min-height: 360px;
+      min-width: 0;
+      padding: 26px 22px 22px;
       border-radius: 22px;
       border: 1px solid #e1e8ee;
       background: #ffffff;
@@ -548,17 +552,32 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
       color: rgba(231, 237, 240, 0.72);
     }
 
-    @media (max-width: 1024px) {
-      .site-header nav {
-        gap: 12px;
-      }
+    .section-pad {
+      padding-block: clamp(42px, 4.5vw, 64px);
+    }
 
-      .hero,
-      .why-grid,
-      .offer-grid {
-        grid-template-columns: 1fr;
-      }
+    .demo-request.section-pad {
+      padding-block: clamp(24px, 3vw, 36px);
+    }
 
+    h1,
+    h2,
+    h3,
+    .shell,
+    .pricing-grid > *,
+    .offer-grid > *,
+    .why-grid > * {
+      min-width: 0;
+    }
+
+    .pricing h2 {
+      max-width: 100%;
+      font-size: clamp(32px, 4.3vw, 53px);
+      line-height: 1.12;
+      text-wrap: balance;
+    }
+
+    @media (max-width: 1200px) {
       .pricing-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -566,9 +585,22 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
       .pricing-card.custom-service {
         grid-column: 1 / -1;
       }
+    }
+
+    @media (max-width: 1024px) {
+      .site-header nav {
+        gap: 12px;
+      }
 
       .hero {
-        padding-top: 40px;
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        width: min(100% - 48px, 900px);
+        min-height: 0;
+        padding-top: 48px;
+        padding-bottom: 24px;
       }
 
       .hero-copy {
@@ -577,10 +609,22 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
 
       .hero-art {
         order: 1;
+        margin-top: 8px;
       }
 
       .signal-card {
-        width: min(340px, 100%);
+        width: min(490px, 100%);
+      }
+    }
+
+    @media (max-width: 760px) {
+      .offer-grid,
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-copy h1 {
+        font-size: clamp(42px, 8vw, 58px);
       }
     }
 
@@ -595,12 +639,22 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
       .hero {
         min-height: auto;
         width: min(100% - 28px, 560px);
+        padding-top: 36px;
       }
       .pricing-grid {
         grid-template-columns: 1fr;
+        grid-auto-rows: auto;
       }
       .pricing-card.custom-service {
         grid-column: auto;
+      }
+      .pricing-card {
+        min-height: 0;
+        height: auto;
+      }
+      .signal-card {
+        height: min(490px, calc(100svh - 110px));
+        min-height: 430px;
       }
       .hero-actions {
         flex-direction: column;
@@ -841,6 +895,30 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
       color: #1e4f83;
     }
 
+    .offer-services {
+      display: grid;
+      gap: 9px;
+      margin: 2px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .offer-services li {
+      position: relative;
+      padding-left: 22px;
+      color: #526271;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .offer-services li::before {
+      position: absolute;
+      left: 0;
+      color: #16818a;
+      content: "✓";
+      font-weight: 800;
+    }
+
     .demo-request {
       border-color: #dbe6ef;
       background: linear-gradient(120deg, #eaf3fa, #f4f8fb);
@@ -889,8 +967,9 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
 
     .signal-card {
       display: grid;
-      gap: 16px;
-      height: 560px;
+      gap: 12px;
+      height: 490px;
+      width: min(430px, 100%);
       grid-template-rows: auto minmax(0, 1fr) auto auto;
     }
 
@@ -909,7 +988,7 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
       position: absolute;
       inset: 0;
       min-height: 0;
-      padding: 22px;
+      padding: 20px;
       border: 1px solid #e1e9ef;
       border-radius: 18px;
       background: #f7fafc;
@@ -966,6 +1045,10 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
       color: #c45b35;
     }
 
+    .service-slide .service-icon-agent {
+      color: #d97757;
+    }
+
     .service-slide h3 {
       margin-bottom: 12px;
       color: #14212b;
@@ -974,10 +1057,35 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
     }
 
     .service-slide p {
-      margin-bottom: 20px;
+      margin-bottom: 16px;
       color: #526271;
       font-size: 14px;
       line-height: 1.75;
+    }
+
+    .service-details {
+      display: grid;
+      gap: 8px;
+      margin: 0;
+      padding: 14px 0 0;
+      border-top: 1px solid #e1e9ef;
+      list-style: none;
+    }
+
+    .service-details li {
+      position: relative;
+      padding-left: 20px;
+      color: #405362;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .service-details li::before {
+      position: absolute;
+      left: 0;
+      color: #16818a;
+      content: "✓";
+      font-weight: 800;
     }
 
     .service-tags {
@@ -1066,8 +1174,8 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
 
     @media (max-width: 640px) {
       .signal-card {
-        height: min(560px, calc(100svh - 120px));
-        min-height: 460px;
+        height: min(490px, calc(100svh - 110px));
+        min-height: 430px;
       }
     }
   </style>
@@ -1115,7 +1223,11 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
               </span>
               <h3>Every call, handled.</h3>
               <p>Answer customers 24/7, qualify requests, capture details, and book appointments with a natural voice agent.</p>
-              <div class="service-tags"><span>Phone support</span><span>Lead intake</span><span>Appointment booking</span></div>
+              <ul class="service-details">
+                <li>Answer common questions and capture caller details</li>
+                <li>Qualify service requests and book appointments</li>
+                <li>Route urgent calls to your team</li>
+              </ul>
             </article>
             <article class="service-slide" data-service-slide role="group" aria-roledescription="slide" aria-label="2 of 5" aria-hidden="true">
               <span class="signal-pill">
@@ -1124,7 +1236,11 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
               </span>
               <h3>Turn chats into action.</h3>
               <p>Custom WhatsApp bots can answer common questions, collect lead details, and route conversations to the right person.</p>
-              <div class="service-tags"><span>Customer support</span><span>Lead qualification</span><span>Instant replies</span></div>
+              <ul class="service-details">
+                <li>Reply to frequently asked questions</li>
+                <li>Collect and qualify new customer enquiries</li>
+                <li>Hand conversations to a person when needed</li>
+              </ul>
             </article>
             <article class="service-slide" data-service-slide role="group" aria-roledescription="slide" aria-label="3 of 5" aria-hidden="true">
               <span class="signal-pill">
@@ -1133,7 +1249,11 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
               </span>
               <h3>Automate your Telegram flow.</h3>
               <p>Build custom Telegram bots for support, notifications, information lookup, and useful AI-powered conversations.</p>
-              <div class="service-tags"><span>Custom commands</span><span>Smart responses</span><span>Notifications</span></div>
+              <ul class="service-details">
+                <li>Create custom commands and guided flows</li>
+                <li>Send alerts, status updates, and reminders</li>
+                <li>Answer questions using your approved information</li>
+              </ul>
             </article>
             <article class="service-slide" data-service-slide role="group" aria-roledescription="slide" aria-label="4 of 5" aria-hidden="true">
               <span class="signal-pill">
@@ -1142,16 +1262,24 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
               </span>
               <h3>Connect the work behind the scenes.</h3>
               <p>AI-powered n8n workflows connect your apps and automate repetitive tasks, follow-ups, and multi-step business processes.</p>
-              <div class="service-tags"><span>App integrations</span><span>Workflow automation</span><span>AI-assisted tasks</span></div>
+              <ul class="service-details">
+                <li>Pass data between the apps you already use</li>
+                <li>Trigger lead follow-ups and routine updates</li>
+                <li>Add AI steps to agreed business workflows</li>
+              </ul>
             </article>
             <article class="service-slide" data-service-slide role="group" aria-roledescription="slide" aria-label="5 of 5" aria-hidden="true">
               <span class="signal-pill">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z"/><path d="m19 15 .9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9L19 15Z"/></svg>
+                <svg class="service-icon-agent" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5 14.1 8l5.4-2.6-2.6 5.4 5.6 1.2-5.6 1.2 2.6 5.4-5.4-2.6-2.1 5.5-2.1-5.5-5.4 2.6L7 13.2l-5.6-1.2L7 10.8 4.5 5.4 9.9 8 12 2.5Z"/><circle cx="12" cy="12" r="2.1"/></svg>
                 Custom AI Agents
               </span>
               <h3>Purpose-built for your process.</h3>
               <p>Purpose-built AI agents can support specific business tasks and connect with selected tools, based on an agreed scope.</p>
-              <div class="service-tags"><span>Task-specific</span><span>Selected integrations</span><span>Scoped build</span></div>
+              <ul class="service-details">
+                <li>Work with business information you provide</li>
+                <li>Connect selected tools for specific tasks</li>
+                <li>Define permissions and limits before launch</li>
+              </ul>
             </article>
           </div>
           <div class="service-controls">
@@ -1182,6 +1310,11 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
           </div>
           <p>Answer incoming calls around the clock with an AI agent that handles customer intake, common questions, service requests, and appointment booking.</p>
           <div class="tags"><span>24/7 call answering</span><span>Customer intake</span><span>Appointment booking</span></div>
+          <ul class="offer-services">
+            <li>Capture names, contact details, and service needs</li>
+            <li>Answer approved FAQs and book calendar slots</li>
+            <li>Escalate urgent calls based on your call rules</li>
+          </ul>
           <a class="offer-link" href="#voice-demo">Request a voice agent demo <span aria-hidden="true">↗</span></a>
         </article>
         <article class="offer-card" id="ai-services">
@@ -1192,6 +1325,11 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
           </div>
           <p>Build WhatsApp and Telegram bots, AI-powered n8n workflows, and task-specific AI agents around the tools and processes your business already uses.</p>
           <div class="tags"><span>WhatsApp &amp; Telegram</span><span>n8n automation</span><span>Custom AI agents</span></div>
+          <ul class="offer-services">
+            <li>Messaging bots for support, lead capture, and notifications</li>
+            <li>n8n flows for app integrations and repeatable tasks</li>
+            <li>AI agents for clearly defined business processes</li>
+          </ul>
           <p class="offer-scope">Project scope, integrations, and final pricing are confirmed during a consultation. Terms &amp; conditions apply.</p>
           <a class="offer-link" href="#pricing">View custom project pricing <span aria-hidden="true">↗</span></a>
         </article>
