@@ -800,18 +800,50 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
     .signal-card {
       display: grid;
       gap: 16px;
+      height: 560px;
+      grid-template-rows: auto minmax(0, 1fr) auto auto;
     }
 
     .signal-header {
       margin-bottom: 0;
     }
 
+    .service-slides {
+      position: relative;
+      min-height: 0;
+      overflow: hidden;
+      border-radius: 18px;
+    }
+
     .service-slide {
-      min-height: 260px;
+      position: absolute;
+      inset: 0;
+      min-height: 0;
       padding: 22px;
       border: 1px solid #e1e9ef;
       border-radius: 18px;
       background: #f7fafc;
+      opacity: 0;
+      transform: translateY(10px);
+      visibility: hidden;
+      transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+        transform 700ms cubic-bezier(0.22, 1, 0.36, 1),
+        visibility 0s linear 700ms;
+      overflow-y: auto;
+    }
+
+    .service-slide.is-active {
+      z-index: 1;
+      opacity: 1;
+      transform: translateY(0);
+      visibility: visible;
+      transition-delay: 0s;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .service-slide {
+        transition: none;
+      }
     }
 
     .service-slide .signal-pill {
@@ -915,6 +947,13 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
       font-size: 10px;
       text-align: right;
     }
+
+    @media (max-width: 640px) {
+      .signal-card {
+        height: min(560px, calc(100svh - 120px));
+        min-height: 460px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -953,31 +992,31 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
             <span class="service-count" id="service-count">01 / 05</span>
           </div>
           <div class="service-slides" id="service-slides" aria-live="off">
-            <article class="service-slide" data-service-slide role="group" aria-roledescription="slide" aria-label="1 of 5">
+            <article class="service-slide is-active" data-service-slide role="group" aria-roledescription="slide" aria-label="1 of 5" aria-hidden="false">
               <span class="signal-pill">AI Calling Agent</span>
               <h3>Every call, handled.</h3>
               <p>Answer customers 24/7, qualify requests, capture details, and book appointments with a natural voice agent.</p>
               <div class="service-tags"><span>Phone support</span><span>Lead intake</span><span>Appointment booking</span></div>
             </article>
-            <article class="service-slide" data-service-slide role="group" aria-roledescription="slide" aria-label="2 of 5" hidden>
+            <article class="service-slide" data-service-slide role="group" aria-roledescription="slide" aria-label="2 of 5" aria-hidden="true">
               <span class="signal-pill">WhatsApp AI Bots</span>
               <h3>Turn chats into action.</h3>
               <p>Custom WhatsApp bots can answer common questions, collect lead details, and route conversations to the right person.</p>
               <div class="service-tags"><span>Customer support</span><span>Lead qualification</span><span>Instant replies</span></div>
             </article>
-            <article class="service-slide" data-service-slide role="group" aria-roledescription="slide" aria-label="3 of 5" hidden>
+            <article class="service-slide" data-service-slide role="group" aria-roledescription="slide" aria-label="3 of 5" aria-hidden="true">
               <span class="signal-pill">Telegram AI Bots</span>
               <h3>Automate your Telegram flow.</h3>
               <p>Build custom Telegram bots for support, notifications, information lookup, and useful AI-powered conversations.</p>
               <div class="service-tags"><span>Custom commands</span><span>Smart responses</span><span>Notifications</span></div>
             </article>
-            <article class="service-slide" data-service-slide role="group" aria-roledescription="slide" aria-label="4 of 5" hidden>
+            <article class="service-slide" data-service-slide role="group" aria-roledescription="slide" aria-label="4 of 5" aria-hidden="true">
               <span class="signal-pill">n8n AI Automation</span>
               <h3>Connect the work behind the scenes.</h3>
               <p>AI-powered n8n workflows connect your apps and automate repetitive tasks, follow-ups, and multi-step business processes.</p>
               <div class="service-tags"><span>App integrations</span><span>Workflow automation</span><span>AI-assisted tasks</span></div>
             </article>
-            <article class="service-slide" data-service-slide role="group" aria-roledescription="slide" aria-label="5 of 5" hidden>
+            <article class="service-slide" data-service-slide role="group" aria-roledescription="slide" aria-label="5 of 5" aria-hidden="true">
               <span class="signal-pill">Custom AI Agents</span>
               <h3>Purpose-built for your process.</h3>
               <p>Purpose-built AI agents can support specific business tasks and connect with selected tools, based on an agreed scope.</p>
@@ -1078,12 +1117,12 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
         <article class="pricing-card custom-service">
           <span class="pricing-label">Tailored Automation · One-Time</span>
           <h3>Custom Services</h3>
-          <span class="price">$50 - $100</span>
+          <span class="price">$50 - $120</span>
           <p class="pricing-frequency">Fixed project pricing · no monthly fee</p>
           <p>Small Project vs. Complex Project tailored builds.</p>
           <ul>
             <li>Small Projects: $50 (Quick automations &amp; basic workflows)</li>
-            <li>Complex Projects: $100 (Advanced integrations &amp; multi-step systems)</li>
+            <li>Complex Projects: $120 (Advanced integrations &amp; multi-step systems)</li>
             <li>Custom workflow built for your business</li>
           </ul>
           <a class="button button-dark schedule-call" href="mailto:support@platformdaemon.tech?subject=Schedule%20a%20Custom%20Project%20Consultation&amp;body=Hi%20PlatformDaemon%2C%0A%0AI%27d%20like%20to%20book%20a%20consultation%20call%20about%20a%20custom%20automation%20project.%0A%0AMy%20project%20idea%3A%20">Schedule a Call <span aria-hidden="true">↗</span></a>
@@ -1113,14 +1152,12 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     let activeService = 0;
     let userPaused = reducedMotion.matches;
-    let pointerInside = false;
-    let focusInside = false;
 
     function updateRotationButton() {
-      const paused = userPaused || pointerInside || focusInside || document.hidden;
-      rotationButton.textContent = userPaused ? "Play slideshow" : "Pause slideshow";
+      const paused = userPaused || document.hidden;
+      rotationButton.textContent = paused ? "Play slideshow" : "Pause slideshow";
       rotationButton.setAttribute("aria-pressed", String(userPaused));
-      rotationButton.setAttribute("aria-label", userPaused ? "Play service slideshow" : "Pause service slideshow");
+      rotationButton.setAttribute("aria-label", paused ? "Play service slideshow" : "Pause service slideshow");
       return !paused;
     }
 
@@ -1128,7 +1165,9 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
       activeService = (index + serviceSlides.length) % serviceSlides.length;
       serviceSlidesContainer.setAttribute("aria-live", announceChange ? "polite" : "off");
       serviceSlides.forEach((slide, slideIndex) => {
-        slide.hidden = slideIndex !== activeService;
+        const active = slideIndex === activeService;
+        slide.classList.toggle("is-active", active);
+        slide.setAttribute("aria-hidden", String(!active));
         slide.setAttribute("aria-label", `${slideIndex + 1} of ${serviceSlides.length}`);
       });
       serviceCount.textContent = `${String(activeService + 1).padStart(2, "0")} / ${String(serviceSlides.length).padStart(2, "0")}`;
@@ -1140,23 +1179,13 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
       userPaused = !userPaused;
       updateRotationButton();
     });
-    serviceCarousel.addEventListener("pointerenter", () => {
-      pointerInside = true;
-    });
-    serviceCarousel.addEventListener("pointerleave", () => {
-      pointerInside = false;
-    });
     serviceCarousel.addEventListener("focusin", () => {
-      focusInside = true;
-    });
-    serviceCarousel.addEventListener("focusout", event => {
-      focusInside = event.relatedTarget instanceof Node && serviceCarousel.contains(event.relatedTarget);
+      userPaused = true;
+      updateRotationButton();
     });
     document.addEventListener("visibilitychange", updateRotationButton);
     reducedMotion.addEventListener("change", event => {
-      if (event.matches) {
-        userPaused = true;
-      }
+      userPaused = event.matches;
       updateRotationButton();
     });
 
