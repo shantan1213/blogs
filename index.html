@@ -86,6 +86,23 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
 
     .site-header .nav-cta {
       color: #101a17;
+      flex: 0 0 auto;
+      white-space: nowrap;
+    }
+
+    .site-header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: clamp(12px, 2vw, 24px);
+    }
+
+    .site-header nav {
+      gap: clamp(16px, 3vw, 34px);
+    }
+
+    .site-header nav a {
+      white-space: nowrap;
     }
 
     .nav-cta:hover,
@@ -545,8 +562,14 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
         align-items: stretch;
       }
       .hero-actions .button,
-      .nav-cta {
+      .hero-actions .nav-cta {
         width: 100%;
+      }
+
+      .site-header .nav-cta {
+        width: auto;
+        min-height: 40px;
+        padding-inline: 16px;
       }
       .reason-copy,
       .pricing-card {
@@ -1081,15 +1104,14 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
 </head>
 <body>
   <header class="site-header">
-    <div class="shell" style="display:flex;align-items:center;justify-content:space-between;gap:24px;">
+    <div class="shell site-header-inner">
       <a class="wordmark" href="#top" aria-label="PlatformDaemon home">PlatformDaemon<span class="tech-dot">.tech</span></a>
       <nav aria-label="Main navigation">
-        <a href="#voice-agent">Voice Agent</a>
-        <a href="#ai-services">AI Services</a>
         <a href="#why-us">Why Us</a>
+        <a href="#ai-services">Services</a>
         <a href="#pricing">Pricing</a>
       </nav>
-      <a class="nav-cta" href="#discussion-form">Get Started</a>
+      <a class="nav-cta" href="#discussion-form">Let’s Talk</a>
     </div>
   </header>
 
