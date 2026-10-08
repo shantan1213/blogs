@@ -38,8 +38,6 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
     .site-header .nav-cta,
     .hero-copy,
     .hero-intro,
-    .offer-card,
-    .offer-card p,
     .demo-copy p,
     .demo-meta,
     .pricing-card,
@@ -169,179 +167,74 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
       min-height: 0;
     }
 
-    .signal-card {
+    .hero-summary {
       position: relative;
-      width: min(390px, 100%);
-      padding: 28px 22px 22px;
-      border: 1px solid rgba(169, 198, 184, 0.16);
-      border-radius: 26px;
-      background: linear-gradient(180deg, #1d2a32, #19232b);
-      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.22);
-    }
-
-    .signal-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 18px;
-      font-size: 11px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      max-width: 100%;
-      white-space: normal;
-      color: #abc8b9;
-    }
-
-    .signal-dots {
-      display: flex;
-      gap: 8px;
-    }
-
-    .signal-dots span {
-      display: block;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: rgba(169, 187, 181, 0.55);
-    }
-
-    .signal-dots span:first-child { background: #6f887d; }
-    .signal-dots span:nth-child(2) { background: #91a99a; }
-    .signal-dots span:nth-child(3) { background: #b6cbbd; }
-
-    .signal-body {
-      background: #151f26;
-      border: 1px solid rgba(169, 187, 181, 0.13);
-      border-radius: 18px;
-      padding: 18px;
-    }
-
-    .signal-pill {
-      display: inline-block;
-      margin-bottom: 12px;
-      padding: 8px 10px;
-      border-radius: 999px;
-      background: rgba(145, 183, 166, 0.12);
-      border: 1px solid rgba(145, 183, 166, 0.2);
-      color: #bfd4c8;
-      font: 500 10px var(--mono);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
-    .signal-body h3 {
-      margin-bottom: 12px;
-      font-size: clamp(25px, 2.3vw, 34px);
-      letter-spacing: -0.05em;
-      color: #edf2ef;
-    }
-
-    .signal-body p {
-      margin-bottom: 18px;
-      color: rgba(231, 237, 240, 0.76);
-      line-height: 1.7;
-    }
-
-    .signal-bars {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      align-items: end;
-      gap: 7px;
-      height: 90px;
-    }
-
-    .signal-bars span {
-      display: block;
-      border-radius: 999px 999px 0 0;
-      background: linear-gradient(180deg, #a8c4b5, #668b79);
-      opacity: 0.9;
-    }
-
-    .offer-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 26px;
-      margin-top: 18px;
-    }
-
-    .offer-card {
-      display: flex;
-      flex-direction: column;
-      padding: 28px 28px 20px;
-      border: 1px solid rgba(190, 209, 203, 0.13);
+      z-index: 1;
+      width: min(440px, 100%);
+      padding: 30px;
+      border: 1px solid #dce6ee;
       border-radius: 24px;
-      background: linear-gradient(180deg, #1b272f, #182129);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.025);
+      background: linear-gradient(145deg, #ffffff, #edf5fa);
+      box-shadow: 0 24px 55px rgba(30, 58, 82, 0.12);
     }
 
-    .offer-badge {
-      display: inline-block;
-      margin-bottom: 16px;
-      padding: 8px 10px;
-      border-radius: 999px;
-      background: rgba(145, 183, 166, 0.1);
-      color: #bfd4c8;
-      border: 1px solid rgba(145, 183, 166, 0.15);
-      font: 500 10px var(--mono);
+    .hero-summary-label {
+      margin-bottom: 12px;
+      color: #287f88;
+      font: 500 10px/1.5 var(--mono);
       letter-spacing: 0.1em;
       text-transform: uppercase;
     }
 
-    .offer-card h3 {
-      margin-bottom: 12px;
-      font-size: clamp(24px, 2vw, 32px);
+    .hero-summary h2 {
+      margin-bottom: 22px;
+      color: #14212b;
+      font-size: clamp(25px, 2.5vw, 34px);
       letter-spacing: -0.05em;
     }
 
-    .offer-title {
-      display: flex;
-      align-items: center;
-      gap: 13px;
-      margin-bottom: 12px;
-    }
-
-    .offer-title h3 {
-      margin: 0;
-    }
-
-    .offer-icon {
+    .hero-summary-list {
       display: grid;
-      width: 42px;
-      height: 42px;
-      flex: 0 0 42px;
-      place-items: center;
-      border: 1px solid #dceaf1;
+      gap: 12px;
+    }
+
+    .hero-summary-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 13px;
+      border: 1px solid #e1e9ef;
       border-radius: 12px;
-      background: #edf5fa;
-      color: #2563a6;
+      background: rgba(255, 255, 255, 0.8);
     }
 
-    .offer-icon svg {
-      width: 22px;
-      height: 22px;
-      fill: none;
-      stroke: currentColor;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      stroke-width: 1.7;
+    .hero-summary-item strong,
+    .hero-summary-item span {
+      display: block;
     }
 
-    .offer-card:nth-child(2) .offer-icon {
-      border-color: #cce7e5;
-      background: #e8f5f3;
-      color: #16818a;
+    .hero-summary-item strong {
+      margin-bottom: 3px;
+      color: #203140;
+      font-size: 13px;
     }
 
-    .offer-card p {
-      margin-bottom: 18px;
-      color: rgba(231, 237, 240, 0.76);
-      line-height: 1.75;
+    .hero-summary-item span {
+      color: #61717d;
+      font-size: 11px;
+      line-height: 1.5;
     }
 
-    .offer-card .tags span {
-      border-color: rgba(190, 209, 203, 0.16);
-      background: rgba(255, 255, 255, 0.025);
-      color: #c1cec7;
+    .hero-summary-number {
+      display: grid;
+      width: 30px;
+      height: 30px;
+      flex: 0 0 30px;
+      place-items: center;
+      border-radius: 9px;
+      background: #e8f2f7;
+      color: #246178;
+      font: 500 10px var(--mono);
     }
 
     .demo-request {
@@ -565,7 +458,6 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
     h3,
     .shell,
     .pricing-grid > *,
-    .offer-grid > *,
     .why-grid > * {
       min-width: 0;
     }
@@ -612,13 +504,9 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
         margin-top: 8px;
       }
 
-      .signal-card {
-        width: min(490px, 100%);
-      }
     }
 
     @media (max-width: 760px) {
-      .offer-grid,
       .why-grid {
         grid-template-columns: 1fr;
       }
@@ -652,10 +540,6 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
         min-height: 0;
         height: auto;
       }
-      .signal-card {
-        height: min(490px, calc(100svh - 110px));
-        min-height: 430px;
-      }
       .hero-actions {
         flex-direction: column;
         align-items: stretch;
@@ -664,7 +548,6 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
       .nav-cta {
         width: 100%;
       }
-      .offer-card,
       .reason-copy,
       .pricing-card {
         padding: 20px 16px;
@@ -695,7 +578,6 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
     .wordmark,
     .footer-brand,
     .hero-copy,
-    .offer-card,
     .pricing-card,
     h1,
     h2,
@@ -721,7 +603,6 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
     .site-header nav a,
     .hero-intro,
     .hero-links a,
-    .offer-card p,
     .demo-request p,
     .reason-copy p,
     .reason-copy li,
@@ -776,13 +657,6 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
       color: #14212b;
     }
 
-    .signal-card {
-      border-color: #dce6ee;
-      background: linear-gradient(145deg, #ffffff, #edf5fa);
-      box-shadow: 0 24px 55px rgba(30, 58, 82, 0.12);
-      z-index: 1;
-    }
-
     .hero-art::before {
       position: absolute;
       width: min(440px, 100%);
@@ -793,40 +667,10 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
       pointer-events: none;
     }
 
-    .signal-header {
-      color: #287f88;
-    }
-
-    .signal-dots span:first-child { background: #9aaab7; }
-    .signal-dots span:nth-child(2) { background: #7d9db7; }
-    .signal-dots span:nth-child(3) { background: #2b8c91; }
-
-    .signal-body {
-      border-color: #e1e9ef;
-      background: #f7fafc;
-    }
-
-    .signal-pill,
-    .offer-badge {
-      border-color: #d4e5ee;
-      background: #e8f2f7;
-      color: #246178;
-    }
-
-    .signal-body h3,
     .pricing-card .price {
       color: #14212b;
     }
 
-    .signal-body p {
-      color: #526271;
-    }
-
-    .signal-bars span {
-      background: linear-gradient(180deg, #54a9b3, #367ab0);
-    }
-
-    .offer-card,
     .reason-copy,
     .pricing-card {
       border-color: #e1e8ee;
@@ -834,13 +678,11 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
       box-shadow: 0 12px 32px rgba(30, 58, 82, 0.055);
     }
 
-    .offer-grid,
     .pricing-grid,
     .why-grid {
       align-items: stretch;
     }
 
-    .offer-card,
     .reason-copy,
     .pricing-card {
       height: 100%;
@@ -862,61 +704,6 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
 
     .pricing {
       background: radial-gradient(ellipse at 82% 35%, rgba(37, 99, 166, 0.055), transparent 54%);
-    }
-
-    .offer-card .tags span {
-      border-color: #dce5eb;
-      background: #f7fafc;
-      color: #526271;
-    }
-
-    .offer-card .offer-scope {
-      margin: 18px 0 0;
-      padding-top: 14px;
-      border-top: 1px solid #e5ebf0;
-      color: #687783;
-      font-size: 12px;
-      line-height: 1.65;
-    }
-
-    .offer-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      align-self: flex-start;
-      margin-top: auto;
-      padding-top: 18px;
-      color: #2563a6;
-      font-size: 12px;
-      font-weight: 700;
-    }
-
-    .offer-link:hover {
-      color: #1e4f83;
-    }
-
-    .offer-services {
-      display: grid;
-      gap: 9px;
-      margin: 2px 0 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .offer-services li {
-      position: relative;
-      padding-left: 22px;
-      color: #526271;
-      font-size: 13px;
-      line-height: 1.55;
-    }
-
-    .offer-services li::before {
-      position: absolute;
-      left: 0;
-      color: #16818a;
-      content: "✓";
-      font-weight: 800;
     }
 
     .demo-request {
@@ -965,67 +752,80 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
       color: #ffffff;
     }
 
-    .signal-card {
+    .service-catalog {
+      padding-top: 48px;
+    }
+
+    .service-catalog-heading {
+      max-width: 760px;
+      margin-bottom: 26px;
+    }
+
+    .service-catalog-heading h2 {
+      font-size: clamp(34px, 4.3vw, 50px);
+      line-height: 1.12;
+      text-wrap: balance;
+    }
+
+    .service-catalog-heading > p:last-child {
+      max-width: 690px;
+      margin: 14px 0 0;
+      color: #526271;
+      line-height: 1.75;
+    }
+
+    .service-grid {
       display: grid;
-      gap: 12px;
-      height: 490px;
-      width: min(430px, 100%);
-      grid-template-rows: auto minmax(0, 1fr) auto auto;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 18px;
     }
 
-    .signal-header {
-      margin-bottom: 0;
+    .service-card {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      grid-column: span 2;
+      padding: 24px;
+      border: 1px solid #e1e8ee;
+      border-radius: 20px;
+      background: #ffffff;
+      box-shadow: 0 12px 32px rgba(30, 58, 82, 0.055);
+      transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
     }
 
-    .service-slides {
-      position: relative;
-      min-height: 0;
-      overflow: hidden;
-      border-radius: 18px;
+    .service-card:nth-child(n + 4) {
+      grid-column: span 3;
     }
 
-    .service-slide {
-      position: absolute;
-      inset: 0;
-      min-height: 0;
-      padding: 20px;
-      border: 1px solid #e1e9ef;
-      border-radius: 18px;
-      background: #f7fafc;
-      opacity: 0;
-      transform: translateY(10px);
-      visibility: hidden;
-      transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
-        transform 700ms cubic-bezier(0.22, 1, 0.36, 1),
-        visibility 0s linear 700ms;
-      overflow-y: auto;
+    .service-card:hover {
+      transform: translateY(-3px);
+      border-color: #c7dce9;
+      box-shadow: 0 18px 38px rgba(30, 58, 82, 0.09);
     }
 
-    .service-slide.is-active {
-      z-index: 1;
-      opacity: 1;
-      transform: translateY(0);
-      visibility: visible;
-      transition-delay: 0s;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .service-slide {
-        transition: none;
-      }
-    }
-
-    .service-slide .signal-pill {
-      display: inline-flex;
+    .service-card-header {
+      display: flex;
       align-items: center;
-      gap: 8px;
-      margin-bottom: 18px;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 20px;
     }
 
-    .service-slide .signal-pill svg {
-      width: 17px;
-      height: 17px;
-      flex: 0 0 17px;
+    .service-card-icon {
+      display: grid;
+      width: 46px;
+      height: 46px;
+      flex: 0 0 46px;
+      place-items: center;
+      border: 1px solid #d4e5ee;
+      border-radius: 14px;
+      background: #e8f2f7;
+      color: #246178;
+    }
+
+    .service-card-icon svg {
+      width: 23px;
+      height: 23px;
       fill: none;
       stroke: currentColor;
       stroke-linecap: round;
@@ -1033,54 +833,74 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
       stroke-width: 1.7;
     }
 
-    .service-slide .service-icon-whatsapp {
-      color: #198754;
+    .service-card:nth-child(2) .service-card-icon {
+      border-color: #cde8dd;
+      background: #eaf6f0;
+      color: #267354;
     }
 
-    .service-slide .service-icon-telegram {
-      color: #287fbd;
+    .service-card:nth-child(3) .service-card-icon {
+      border-color: #d5e2f4;
+      background: #edf3fb;
+      color: #3470a8;
     }
 
-    .service-slide .service-icon-n8n {
-      color: #c45b35;
+    .service-card:nth-child(4) .service-card-icon {
+      border-color: #f0ddcf;
+      background: #fbf1e9;
+      color: #a65b39;
     }
 
-    .service-slide .service-icon-agent {
-      color: #d97757;
+    .service-card:nth-child(5) .service-card-icon {
+      border-color: #e5d8ef;
+      background: #f4eef8;
+      color: #80549d;
     }
 
-    .service-slide h3 {
-      margin-bottom: 12px;
+    .service-card-number {
+      color: #81909b;
+      font: 500 10px var(--mono);
+      letter-spacing: 0.08em;
+    }
+
+    .service-card h3 {
+      margin-bottom: 10px;
       color: #14212b;
-      font-size: clamp(26px, 2.4vw, 34px);
-      letter-spacing: -0.05em;
+      font-size: clamp(21px, 2vw, 25px);
+      letter-spacing: -0.045em;
     }
 
-    .service-slide p {
-      margin-bottom: 16px;
+    .service-card > p {
+      margin-bottom: 18px;
       color: #526271;
-      font-size: 14px;
+      font-size: 13px;
       line-height: 1.75;
     }
 
-    .service-details {
+    .service-card h4 {
+      margin: 0 0 11px;
+      color: #203140;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .service-card ul {
       display: grid;
-      gap: 8px;
+      gap: 9px;
       margin: 0;
-      padding: 14px 0 0;
-      border-top: 1px solid #e1e9ef;
+      padding: 0;
       list-style: none;
     }
 
-    .service-details li {
+    .service-card li {
       position: relative;
       padding-left: 20px;
-      color: #405362;
+      color: #526271;
       font-size: 12px;
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
-    .service-details li::before {
+    .service-card li::before {
       position: absolute;
       left: 0;
       color: #16818a;
@@ -1088,94 +908,59 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
       font-weight: 800;
     }
 
-    .service-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
+    .service-best-for {
+      margin: 18px 0 0;
+      padding-top: 14px;
+      border-top: 1px solid #e7edf1;
+      color: #61717d;
+      font-size: 11px;
+      line-height: 1.6;
     }
 
-    .service-tags span {
-      padding: 7px 9px;
-      border: 1px solid #dce5eb;
-      border-radius: 999px;
-      background: #ffffff;
-      color: #526271;
-      font-size: 10px;
-      font-weight: 600;
-    }
-
-    .service-controls,
-    .service-navigation {
-      display: flex;
-      align-items: center;
-    }
-
-    .service-controls {
-      justify-content: space-between;
-      gap: 12px;
-    }
-
-    .service-navigation {
-      gap: 8px;
-    }
-
-    .service-control {
-      display: inline-flex;
-      min-width: 38px;
-      min-height: 38px;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid #d4e0e8;
-      border-radius: 50%;
-      background: #ffffff;
+    .service-best-for strong {
       color: #203140;
-      cursor: pointer;
-      font: 600 15px/1 var(--body);
-      transition: background 0.2s ease, border-color 0.2s ease;
     }
 
-    .service-control:hover {
-      border-color: #9db8cf;
-      background: #eef5fb;
+    .service-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      align-self: flex-start;
+      margin-top: auto;
+      padding-top: 20px;
+      color: #2563a6;
+      font-size: 12px;
+      font-weight: 700;
     }
 
-    .service-control:focus-visible {
+    .service-card-link:hover {
+      color: #1e4f83;
+    }
+
+    .service-card-link:focus-visible {
+      border-radius: 3px;
       outline: 3px solid rgba(37, 99, 166, 0.35);
-      outline-offset: 2px;
+      outline-offset: 3px;
     }
 
-    .service-count {
-      min-width: 48px;
-      color: #526271;
-      font: 500 11px var(--mono);
-      text-align: center;
-    }
+    @media (max-width: 1024px) {
+      .service-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
 
-    .service-rotation {
-      min-height: 34px;
-      padding: 0 10px;
-      border: 0;
-      background: transparent;
-      color: #526271;
-      cursor: pointer;
-      font: 600 11px var(--body);
-    }
-
-    .service-rotation:hover {
-      color: #1d6ba9;
-    }
-
-    .service-terms {
-      margin: -6px 0 0;
-      color: #73808b;
-      font-size: 10px;
-      text-align: right;
+      .service-card,
+      .service-card:nth-child(n + 4) {
+        grid-column: span 1;
+      }
     }
 
     @media (max-width: 640px) {
-      .signal-card {
-        height: min(490px, calc(100svh - 110px));
-        min-height: 430px;
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-card {
+        padding: 22px 20px;
       }
     }
   </style>
@@ -1210,128 +995,122 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
         </div>
       </div>
       <div class="hero-art hero-visual">
-        <div class="signal-card" role="region" aria-roledescription="carousel" aria-label="AI automation services">
-          <div class="signal-header">
-            <span>Services We Build</span>
-            <span class="service-count" id="service-count">01 / 05</span>
-          </div>
-          <div class="service-slides" id="service-slides" aria-live="off">
-            <article class="service-slide is-active" data-service-slide role="group" aria-roledescription="slide" aria-label="1 of 5" aria-hidden="false">
-              <span class="signal-pill">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.75h2.2l1.2 3.1-1.7 1.45a14.7 14.7 0 0 0 6 6l1.45-1.7 3.1 1.2V16a2 2 0 0 1-2.2 2A14.8 14.8 0 0 1 6 7.95a2 2 0 0 1 1-4.2Z"/><path d="M14.5 4.5a5 5 0 0 1 5 5M14.5 7.5a2 2 0 0 1 2 2"/></svg>
-                AI Calling Agent
-              </span>
-              <h3>Every call, handled.</h3>
-              <p>Answer customers 24/7, qualify requests, capture details, and book appointments with a natural voice agent.</p>
-              <ul class="service-details">
-                <li>Answer common questions and capture caller details</li>
-                <li>Qualify service requests and book appointments</li>
-                <li>Route urgent calls to your team</li>
-              </ul>
-            </article>
-            <article class="service-slide" data-service-slide role="group" aria-roledescription="slide" aria-label="2 of 5" aria-hidden="true">
-              <span class="signal-pill">
-                <svg class="service-icon-whatsapp" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.4-4A8 8 0 1 1 20 11.5Z"/><path d="M9 8.5c.3 2.6 2 4.4 4.6 5l1.2-1.1 2 .8v1a1 1 0 0 1-1 1.1A8 8 0 0 1 8 8.7a1 1 0 0 1 1-.9Z"/></svg>
-                WhatsApp AI Bots
-              </span>
-              <h3>Turn chats into action.</h3>
-              <p>Custom WhatsApp bots can answer common questions, collect lead details, and route conversations to the right person.</p>
-              <ul class="service-details">
-                <li>Reply to frequently asked questions</li>
-                <li>Collect and qualify new customer enquiries</li>
-                <li>Hand conversations to a person when needed</li>
-              </ul>
-            </article>
-            <article class="service-slide" data-service-slide role="group" aria-roledescription="slide" aria-label="3 of 5" aria-hidden="true">
-              <span class="signal-pill">
-                <svg class="service-icon-telegram" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 11.4 17-7-4.4 16-4.3-5.2-3 2.5.4-5.1L18 7.2l-11.2 5.9L3 11.4Z"/><path d="m11.3 15.2 3.3 5.2"/></svg>
-                Telegram AI Bots
-              </span>
-              <h3>Automate your Telegram flow.</h3>
-              <p>Build custom Telegram bots for support, notifications, information lookup, and useful AI-powered conversations.</p>
-              <ul class="service-details">
-                <li>Create custom commands and guided flows</li>
-                <li>Send alerts, status updates, and reminders</li>
-                <li>Answer questions using your approved information</li>
-              </ul>
-            </article>
-            <article class="service-slide" data-service-slide role="group" aria-roledescription="slide" aria-label="4 of 5" aria-hidden="true">
-              <span class="signal-pill">
-                <svg class="service-icon-n8n" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10M7 17h10M7 7v10M17 7v10"/><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><circle cx="12" cy="12" r="2"/></svg>
-                n8n AI Automation
-              </span>
-              <h3>Connect the work behind the scenes.</h3>
-              <p>AI-powered n8n workflows connect your apps and automate repetitive tasks, follow-ups, and multi-step business processes.</p>
-              <ul class="service-details">
-                <li>Pass data between the apps you already use</li>
-                <li>Trigger lead follow-ups and routine updates</li>
-                <li>Add AI steps to agreed business workflows</li>
-              </ul>
-            </article>
-            <article class="service-slide" data-service-slide role="group" aria-roledescription="slide" aria-label="5 of 5" aria-hidden="true">
-              <span class="signal-pill">
-                <svg class="service-icon-agent" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5 14.1 8l5.4-2.6-2.6 5.4 5.6 1.2-5.6 1.2 2.6 5.4-5.4-2.6-2.1 5.5-2.1-5.5-5.4 2.6L7 13.2l-5.6-1.2L7 10.8 4.5 5.4 9.9 8 12 2.5Z"/><circle cx="12" cy="12" r="2.1"/></svg>
-                Custom AI Agents
-              </span>
-              <h3>Purpose-built for your process.</h3>
-              <p>Purpose-built AI agents can support specific business tasks and connect with selected tools, based on an agreed scope.</p>
-              <ul class="service-details">
-                <li>Work with business information you provide</li>
-                <li>Connect selected tools for specific tasks</li>
-                <li>Define permissions and limits before launch</li>
-              </ul>
-            </article>
-          </div>
-          <div class="service-controls">
-            <div class="service-navigation" aria-label="Service slideshow controls">
-              <button class="service-control" type="button" data-service-prev aria-label="Previous service">←</button>
-              <button class="service-control" type="button" data-service-next aria-label="Next service">→</button>
+        <div class="hero-summary">
+          <p class="hero-summary-label">PlatformDaemon / practical automation</p>
+          <h2>Technology that takes work off your plate.</h2>
+          <div class="hero-summary-list">
+            <div class="hero-summary-item">
+              <span class="hero-summary-number" aria-hidden="true">01</span>
+              <div><strong>Respond</strong><span>Handle incoming calls and customer questions.</span></div>
             </div>
-            <button class="service-rotation" type="button" data-service-toggle aria-pressed="false">Pause slideshow</button>
+            <div class="hero-summary-item">
+              <span class="hero-summary-number" aria-hidden="true">02</span>
+              <div><strong>Coordinate</strong><span>Capture requests and keep your team in the loop.</span></div>
+            </div>
+            <div class="hero-summary-item">
+              <span class="hero-summary-number" aria-hidden="true">03</span>
+              <div><strong>Connect</strong><span>Link tools and automate repeatable business tasks.</span></div>
+            </div>
           </div>
-          <p class="service-terms">Service scope and availability vary. Terms &amp; conditions apply.</p>
         </div>
       </div>
     </section>
 
-    <section class="shell section-pad" id="voice-agent">
-      <div class="section-heading" style="margin-bottom: 22px;">
-        <div>
-          <p class="eyebrow">VOICE AGENTS + CUSTOM AUTOMATION</p>
-          <h2>AI that answers customers and gets work done.</h2>
-        </div>
+    <section class="shell section-pad service-catalog" id="ai-services" aria-labelledby="services-title">
+      <div class="service-catalog-heading" id="voice-agent">
+        <p class="eyebrow">WHAT WE BUILD</p>
+        <h2 id="services-title">Five services. Built around your business.</h2>
+        <p>From the first customer call to the repetitive work behind the scenes, each solution is scoped around your process, tools, and the way your team works.</p>
       </div>
-      <div class="offer-grid">
-        <article class="offer-card">
-          <span class="offer-badge">Starting at $50/month</span>
-          <div class="offer-title">
-            <span class="offer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13a7 7 0 0 1 14 0"/><path d="M5 13v4a2 2 0 0 0 2 2h1v-6H5ZM19 13v4a2 2 0 0 1-2 2h-1v-6h3Z"/><path d="M10 19h4"/></svg></span>
-            <h3>Autonomous AI Voice Executive</h3>
+      <div class="service-grid">
+        <article class="service-card">
+          <div class="service-card-header">
+            <span class="service-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 3.75h2.2l1.2 3.1-1.7 1.45a14.7 14.7 0 0 0 6 6l1.45-1.7 3.1 1.2V16a2 2 0 0 1-2.2 2A14.8 14.8 0 0 1 6 7.95a2 2 0 0 1 1-4.2Z"/><path d="M14.5 4.5a5 5 0 0 1 5 5M14.5 7.5a2 2 0 0 1 2 2"/></svg></span>
+            <span class="service-card-number">01 / CALLS</span>
           </div>
-          <p>Answer incoming calls around the clock with an AI agent that handles customer intake, common questions, service requests, and appointment booking.</p>
-          <div class="tags"><span>24/7 call answering</span><span>Customer intake</span><span>Appointment booking</span></div>
-          <ul class="offer-services">
-            <li>Capture names, contact details, and service needs</li>
-            <li>Answer approved FAQs and book calendar slots</li>
-            <li>Escalate urgent calls based on your call rules</li>
+          <h3>AI Calling Agent</h3>
+          <p>A natural-sounding phone agent that answers incoming calls, gathers the details your team needs, and helps customers take the next step—even outside business hours.</p>
+          <h4>What it can handle</h4>
+          <ul>
+            <li>Answer approved FAQs and collect caller details.</li>
+            <li>Identify the service needed, location, and urgency.</li>
+            <li>Book available calendar slots or send a call summary.</li>
+            <li>Route urgent or out-of-scope calls to your team.</li>
           </ul>
-          <a class="offer-link" href="#voice-demo">Request a voice agent demo <span aria-hidden="true">↗</span></a>
+          <p class="service-best-for"><strong>Best for:</strong> Contractors, property managers, and local service teams that miss calls while on the job.</p>
+          <a class="service-card-link" href="#pricing">View calling plans <span aria-hidden="true">↗</span></a>
         </article>
-        <article class="offer-card" id="ai-services">
-          <span class="offer-badge">One-time custom projects</span>
-          <div class="offer-title">
-            <span class="offer-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="12" cy="18" r="2"/><path d="M7 7.2 10.8 16M17 7.2 13.2 16M7 6h10"/></svg></span>
-            <h3>Bots, workflows &amp; AI agents</h3>
+
+        <article class="service-card">
+          <div class="service-card-header">
+            <span class="service-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.4-4A8 8 0 1 1 20 11.5Z"/><path d="M9 8.5c.3 2.6 2 4.4 4.6 5l1.2-1.1 2 .8v1a1 1 0 0 1-1 1.1A8 8 0 0 1 8 8.7a1 1 0 0 1 1-.9Z"/></svg></span>
+            <span class="service-card-number">02 / MESSAGING</span>
           </div>
-          <p>Build WhatsApp and Telegram bots, AI-powered n8n workflows, and task-specific AI agents around the tools and processes your business already uses.</p>
-          <div class="tags"><span>WhatsApp &amp; Telegram</span><span>n8n automation</span><span>Custom AI agents</span></div>
-          <ul class="offer-services">
-            <li>Messaging bots for support, lead capture, and notifications</li>
-            <li>n8n flows for app integrations and repeatable tasks</li>
-            <li>AI agents for clearly defined business processes</li>
+          <h3>WhatsApp Bots</h3>
+          <p>A business messaging flow that gives customers quick answers, captures new enquiries, and guides each conversation toward a useful next step.</p>
+          <h4>What it can handle</h4>
+          <ul>
+            <li>Respond to common questions using information you approve.</li>
+            <li>Collect contact details and qualify service enquiries.</li>
+            <li>Send booking confirmations, reminders, or status updates.</li>
+            <li>Hand a conversation to a person when it needs judgment.</li>
           </ul>
-          <p class="offer-scope">Project scope, integrations, and final pricing are confirmed during a consultation. Terms &amp; conditions apply.</p>
-          <a class="offer-link" href="#pricing">View custom project pricing <span aria-hidden="true">↗</span></a>
+          <p class="service-best-for"><strong>Best for:</strong> Businesses that already use WhatsApp to answer questions and follow up with leads.</p>
+          <a class="service-card-link" href="mailto:support@platformdaemon.tech?subject=WhatsApp%20Bot%20Project">Discuss a WhatsApp bot <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="service-card">
+          <div class="service-card-header">
+            <span class="service-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m3 11.4 17-7-4.4 16-4.3-5.2-3 2.5.4-5.1L18 7.2l-11.2 5.9L3 11.4Z"/><path d="m11.3 15.2 3.3 5.2"/></svg></span>
+            <span class="service-card-number">03 / MESSAGING</span>
+          </div>
+          <h3>Telegram Bots</h3>
+          <p>A purpose-built Telegram bot for structured conversations, self-service information, and timely updates delivered in the chat your audience already uses.</p>
+          <h4>What it can handle</h4>
+          <ul>
+            <li>Offer custom commands, menus, and guided request forms.</li>
+            <li>Share approved information and answer routine questions.</li>
+            <li>Send alerts, reminders, and workflow status notifications.</li>
+            <li>Pass selected requests or data to connected business tools.</li>
+          </ul>
+          <p class="service-best-for"><strong>Best for:</strong> Teams and communities that need repeatable support or notifications inside Telegram.</p>
+          <a class="service-card-link" href="mailto:support@platformdaemon.tech?subject=Telegram%20Bot%20Project">Discuss a Telegram bot <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="service-card">
+          <div class="service-card-header">
+            <span class="service-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 7h10M7 17h10M7 7v10M17 7v10"/><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><circle cx="12" cy="12" r="2"/></svg></span>
+            <span class="service-card-number">04 / WORKFLOWS</span>
+          </div>
+          <h3>n8n Automation</h3>
+          <p>Connected workflows that move information between your apps and take care of predictable, multi-step tasks without adding more manual admin.</p>
+          <h4>What it can handle</h4>
+          <ul>
+            <li>Connect supported apps and pass data between them.</li>
+            <li>Trigger lead follow-ups, task creation, and notifications.</li>
+            <li>Route requests by type, status, or other agreed rules.</li>
+            <li>Add review steps and team handoffs where needed.</li>
+          </ul>
+          <p class="service-best-for"><strong>Best for:</strong> Businesses repeating the same updates, follow-ups, and handoffs across multiple tools.</p>
+          <a class="service-card-link" href="mailto:support@platformdaemon.tech?subject=n8n%20Workflow%20Automation">Plan a workflow <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="service-card">
+          <div class="service-card-header">
+            <span class="service-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2.5 14.1 8l5.4-2.6-2.6 5.4 5.6 1.2-5.6 1.2 2.6 5.4-5.4-2.6-2.1 5.5-2.1-5.5-5.4 2.6L7 13.2l-5.6-1.2L7 10.8 4.5 5.4 9.9 8 12 2.5Z"/><circle cx="12" cy="12" r="2.1"/></svg></span>
+            <span class="service-card-number">05 / CUSTOM AI</span>
+          </div>
+          <h3>Custom AI Agents</h3>
+          <p>An AI assistant designed for a specific business task, grounded in the information you provide and connected to selected tools where appropriate.</p>
+          <h4>What it can handle</h4>
+          <ul>
+            <li>Find and summarize relevant information from approved documents.</li>
+            <li>Draft responses, reports, or structured records for review.</li>
+            <li>Guide staff through a defined process or knowledge base.</li>
+            <li>Use scoped integrations with clear limits and human handoffs.</li>
+          </ul>
+          <p class="service-best-for"><strong>Best for:</strong> A well-defined task that needs more context and judgment than a simple rule-based workflow.</p>
+          <a class="service-card-link" href="mailto:support@platformdaemon.tech?subject=Custom%20AI%20Agent%20Project">Scope an AI agent <span aria-hidden="true">↗</span></a>
         </article>
       </div>
     </section>
@@ -1419,59 +1198,5 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
       <p>Intelligent Automation &amp; Voice Agents</p>
     </div>
   </footer>
-  <script>
-    const serviceCarousel = document.querySelector(".hero-visual");
-    const serviceSlidesContainer = serviceCarousel.querySelector("#service-slides");
-    const serviceSlides = Array.from(serviceSlidesContainer.querySelectorAll("[data-service-slide]"));
-    const serviceCount = serviceCarousel.querySelector("#service-count");
-    const rotationButton = serviceCarousel.querySelector("[data-service-toggle]");
-    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    let activeService = 0;
-    let userPaused = reducedMotion.matches;
-
-    function updateRotationButton() {
-      const paused = userPaused || document.hidden;
-      rotationButton.textContent = paused ? "Play slideshow" : "Pause slideshow";
-      rotationButton.setAttribute("aria-pressed", String(userPaused));
-      rotationButton.setAttribute("aria-label", paused ? "Play service slideshow" : "Pause service slideshow");
-      return !paused;
-    }
-
-    function showService(index, announceChange = false) {
-      activeService = (index + serviceSlides.length) % serviceSlides.length;
-      serviceSlidesContainer.setAttribute("aria-live", announceChange ? "polite" : "off");
-      serviceSlides.forEach((slide, slideIndex) => {
-        const active = slideIndex === activeService;
-        slide.classList.toggle("is-active", active);
-        slide.setAttribute("aria-hidden", String(!active));
-        slide.setAttribute("aria-label", `${slideIndex + 1} of ${serviceSlides.length}`);
-      });
-      serviceCount.textContent = `${String(activeService + 1).padStart(2, "0")} / ${String(serviceSlides.length).padStart(2, "0")}`;
-    }
-
-    serviceCarousel.querySelector("[data-service-prev]").addEventListener("click", () => showService(activeService - 1, true));
-    serviceCarousel.querySelector("[data-service-next]").addEventListener("click", () => showService(activeService + 1, true));
-    rotationButton.addEventListener("click", () => {
-      userPaused = !userPaused;
-      updateRotationButton();
-    });
-    serviceCarousel.addEventListener("focusin", () => {
-      userPaused = true;
-      updateRotationButton();
-    });
-    document.addEventListener("visibilitychange", updateRotationButton);
-    reducedMotion.addEventListener("change", event => {
-      userPaused = event.matches;
-      updateRotationButton();
-    });
-
-    showService(activeService);
-    updateRotationButton();
-    window.setInterval(() => {
-      if (updateRotationButton()) {
-        showService(activeService + 1);
-      }
-    }, 6000);
-  </script>
 </body>
 </html>
