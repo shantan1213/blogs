@@ -263,6 +263,8 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
     }
 
     .offer-card {
+      display: flex;
+      flex-direction: column;
       padding: 28px 28px 20px;
       border: 1px solid rgba(190, 209, 203, 0.13);
       border-radius: 24px;
@@ -788,7 +790,9 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      margin-top: 14px;
+      align-self: flex-start;
+      margin-top: auto;
+      padding-top: 18px;
       color: #2563a6;
       font-size: 12px;
       font-weight: 700;
@@ -1095,6 +1099,7 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
           <h3>Autonomous AI Voice Executive</h3>
           <p>Answer incoming calls around the clock with an AI agent that handles customer intake, common questions, service requests, and appointment booking.</p>
           <div class="tags"><span>24/7 call answering</span><span>Customer intake</span><span>Appointment booking</span></div>
+          <a class="offer-link" href="#voice-demo">Request a voice agent demo <span aria-hidden="true">↗</span></a>
         </article>
         <article class="offer-card" id="ai-services">
           <span class="offer-badge">One-time custom projects</span>
@@ -1107,7 +1112,7 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
       </div>
     </section>
 
-    <section class="shell demo-request section-pad" aria-labelledby="demo-title">
+    <section class="shell demo-request section-pad" id="voice-demo" aria-labelledby="demo-title">
       <p class="eyebrow">VOICE AGENT DEMO</p>
       <h2 id="demo-title">Want to hear it in action?</h2>
       <p>There isn’t a public demo recording yet. Tell us about your business and request a voice-agent demo tailored to the calls you handle.</p>
