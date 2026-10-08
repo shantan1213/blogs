@@ -237,25 +237,9 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
       font: 500 10px var(--mono);
     }
 
-    .demo-request {
-      margin-top: 32px;
-      padding: 32px 30px;
-      border: 1px solid rgba(190, 209, 203, 0.13);
-      border-radius: 28px;
-      background: linear-gradient(180deg, #1b272f, #182129);
-    }
-
-    .demo-request h2,
     .why-us h2,
     .pricing h2 {
       letter-spacing: -0.06em;
-    }
-
-    .demo-request p {
-      max-width: 720px;
-      margin: 14px 0 20px;
-      color: rgba(231, 237, 240, 0.76);
-      line-height: 1.8;
     }
 
     .why-us {
@@ -280,6 +264,26 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
     .reason-copy p {
       color: rgba(231, 237, 240, 0.76);
       line-height: 1.85;
+    }
+
+    .reason-copy h3 {
+      margin: 0 0 4px;
+      color: #14212b;
+      font-size: 20px;
+      letter-spacing: -0.04em;
+    }
+
+    .reason-copy p + p {
+      margin-top: 6px;
+    }
+
+    .reason-copy .reason-note {
+      margin: 20px 0 0;
+      padding-top: 14px;
+      border-top: 1px solid #e5ebf0;
+      color: #687783;
+      font-size: 12px;
+      line-height: 1.65;
     }
 
     .reason-copy ul {
@@ -449,10 +453,6 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
       padding-block: clamp(42px, 4.5vw, 64px);
     }
 
-    .demo-request.section-pad {
-      padding-block: clamp(24px, 3vw, 36px);
-    }
-
     h1,
     h2,
     h3,
@@ -552,9 +552,6 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
       .pricing-card {
         padding: 20px 16px;
       }
-      .demo-request {
-        padding: 22px 16px;
-      }
     }
 
     body {
@@ -603,7 +600,6 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
     .site-header nav a,
     .hero-intro,
     .hero-links a,
-    .demo-request p,
     .reason-copy p,
     .reason-copy li,
     .pricing-card p,
@@ -704,11 +700,6 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
 
     .pricing {
       background: radial-gradient(ellipse at 82% 35%, rgba(37, 99, 166, 0.055), transparent 54%);
-    }
-
-    .demo-request {
-      border-color: #dbe6ef;
-      background: linear-gradient(120deg, #eaf3fa, #f4f8fb);
     }
 
     .pricing-card.featured {
@@ -943,7 +934,122 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
       outline-offset: 3px;
     }
 
-    @media (max-width: 1024px) {
+    .discussion {
+      scroll-margin-top: 96px;
+    }
+
+    .discussion-panel {
+      display: grid;
+      grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+      gap: clamp(28px, 5vw, 64px);
+      padding: clamp(24px, 5vw, 52px);
+      border: 1px solid #dce6ee;
+      border-radius: 24px;
+      background: linear-gradient(135deg, #edf5fa, #ffffff 62%);
+      box-shadow: 0 18px 45px rgba(30, 58, 82, 0.07);
+    }
+
+    .discussion-copy h2 {
+      margin-bottom: 16px;
+      color: #14212b;
+      font-size: clamp(32px, 4vw, 46px);
+      line-height: 1.12;
+      text-wrap: balance;
+    }
+
+    .discussion-copy > p:last-child {
+      max-width: 390px;
+      margin-bottom: 0;
+      color: #526271;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .discussion-form {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      min-width: 0;
+    }
+
+    .discussion-field {
+      display: grid;
+      gap: 7px;
+      min-width: 0;
+    }
+
+    .discussion-field-full {
+      grid-column: 1 / -1;
+    }
+
+    .discussion-field label {
+      color: #203140;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .discussion-field input,
+    .discussion-field select,
+    .discussion-field textarea {
+      width: 100%;
+      min-width: 0;
+      border: 1px solid #cbd7e2;
+      border-radius: 10px;
+      background: #ffffff;
+      color: #203140;
+      font: 400 14px/1.5 var(--body);
+    }
+
+    .discussion-field input,
+    .discussion-field select {
+      min-height: 46px;
+      padding: 0 13px;
+    }
+
+    .discussion-field textarea {
+      min-height: 120px;
+      padding: 12px 13px;
+      resize: vertical;
+    }
+
+    .discussion-field input::placeholder,
+    .discussion-field textarea::placeholder {
+      color: #81909b;
+    }
+
+    .discussion-field input:focus-visible,
+    .discussion-field select:focus-visible,
+    .discussion-field textarea:focus-visible {
+      border-color: #2563a6;
+      outline: 3px solid rgba(37, 99, 166, 0.18);
+      outline-offset: 1px;
+    }
+
+    .discussion-submit {
+      min-height: 48px;
+      justify-content: center;
+      border: 0;
+      border-radius: 10px;
+      cursor: pointer;
+      font: 700 13px var(--body);
+    }
+
+    .discussion-note {
+      align-self: center;
+      margin: 0;
+      color: #61717d;
+      font-size: 11px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 760px) {
+      .discussion-panel {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+    }
+
+    @media (max-width: 1200px) {
       .service-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -962,6 +1068,14 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
       .service-card {
         padding: 22px 20px;
       }
+
+      .discussion-form {
+        grid-template-columns: 1fr;
+      }
+
+      .discussion-field-full {
+        grid-column: auto;
+      }
     }
   </style>
 </head>
@@ -975,7 +1089,7 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
         <a href="#why-us">Why Us</a>
         <a href="#pricing">Pricing</a>
       </nav>
-      <a class="nav-cta" href="#pricing">Get Started</a>
+      <a class="nav-cta" href="#discussion-form">Get Started</a>
     </div>
   </header>
 
@@ -986,12 +1100,12 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
         <h1 id="hero-title">Enterprise AI Power.<br>Local Business Pricing.</h1>
         <p class="hero-intro">Automate customer conversations and repetitive work with AI calling agents, custom WhatsApp and Telegram bots, n8n workflows, and purpose-built AI agents. Clear scope, practical solutions, no bloated retainers.</p>
         <div class="hero-actions">
-          <a class="button button-dark" href="mailto:support@platformdaemon.tech?subject=Request%20a%20voice%20demo">Request a Voice Demo <span aria-hidden="true">↗</span></a>
+          <a class="button button-dark" href="#discussion-form" data-service="AI Calling Agent">Discuss a Voice Agent <span aria-hidden="true">↗</span></a>
           <a class="button button-light" href="#ai-services">Explore AI Services <span aria-hidden="true">↗</span></a>
         </div>
         <div class="hero-links" aria-label="Social and contact links">
           <a href="mailto:support@platformdaemon.tech">support@platformdaemon.tech</a>
-          <a href="mailto:support@platformdaemon.tech?subject=Book%20a%20consultation">Book a consultation</a>
+          <a href="#discussion-form">Start a discussion</a>
         </div>
       </div>
       <div class="hero-art hero-visual">
@@ -1038,7 +1152,7 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
             <li>Route urgent or out-of-scope calls to your team.</li>
           </ul>
           <p class="service-best-for"><strong>Best for:</strong> Contractors, property managers, and local service teams that miss calls while on the job.</p>
-          <a class="service-card-link" href="#pricing">View calling plans <span aria-hidden="true">↗</span></a>
+          <a class="service-card-link" href="#discussion-form" data-service="AI Calling Agent">Discuss a voice agent <span aria-hidden="true">↗</span></a>
         </article>
 
         <article class="service-card">
@@ -1056,7 +1170,7 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
             <li>Hand a conversation to a person when it needs judgment.</li>
           </ul>
           <p class="service-best-for"><strong>Best for:</strong> Businesses that already use WhatsApp to answer questions and follow up with leads.</p>
-          <a class="service-card-link" href="mailto:support@platformdaemon.tech?subject=WhatsApp%20Bot%20Project">Discuss a WhatsApp bot <span aria-hidden="true">↗</span></a>
+          <a class="service-card-link" href="#discussion-form" data-service="WhatsApp Bots">Discuss a WhatsApp bot <span aria-hidden="true">↗</span></a>
         </article>
 
         <article class="service-card">
@@ -1074,7 +1188,7 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
             <li>Pass selected requests or data to connected business tools.</li>
           </ul>
           <p class="service-best-for"><strong>Best for:</strong> Teams and communities that need repeatable support or notifications inside Telegram.</p>
-          <a class="service-card-link" href="mailto:support@platformdaemon.tech?subject=Telegram%20Bot%20Project">Discuss a Telegram bot <span aria-hidden="true">↗</span></a>
+          <a class="service-card-link" href="#discussion-form" data-service="Telegram Bots">Discuss a Telegram bot <span aria-hidden="true">↗</span></a>
         </article>
 
         <article class="service-card">
@@ -1092,7 +1206,7 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
             <li>Add review steps and team handoffs where needed.</li>
           </ul>
           <p class="service-best-for"><strong>Best for:</strong> Businesses repeating the same updates, follow-ups, and handoffs across multiple tools.</p>
-          <a class="service-card-link" href="mailto:support@platformdaemon.tech?subject=n8n%20Workflow%20Automation">Plan a workflow <span aria-hidden="true">↗</span></a>
+          <a class="service-card-link" href="#discussion-form" data-service="n8n Automation">Plan a workflow <span aria-hidden="true">↗</span></a>
         </article>
 
         <article class="service-card">
@@ -1110,31 +1224,73 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
             <li>Use scoped integrations with clear limits and human handoffs.</li>
           </ul>
           <p class="service-best-for"><strong>Best for:</strong> A well-defined task that needs more context and judgment than a simple rule-based workflow.</p>
-          <a class="service-card-link" href="mailto:support@platformdaemon.tech?subject=Custom%20AI%20Agent%20Project">Scope an AI agent <span aria-hidden="true">↗</span></a>
+          <a class="service-card-link" href="#discussion-form" data-service="Custom AI Agents">Scope an AI agent <span aria-hidden="true">↗</span></a>
         </article>
       </div>
     </section>
 
-    <section class="shell demo-request section-pad" id="voice-demo" aria-labelledby="demo-title">
-      <p class="eyebrow">VOICE AGENT DEMO</p>
-      <h2 id="demo-title">Want to hear it in action?</h2>
-      <p>There isn’t a public demo recording yet. Tell us about your business and request a voice-agent demo tailored to the calls you handle.</p>
-      <a class="button button-dark" href="mailto:support@platformdaemon.tech?subject=Request%20a%20voice%20agent%20demo">Request a demo by email <span aria-hidden="true">↗</span></a>
+    <section class="shell section-pad discussion" id="discussion-form" aria-labelledby="discussion-title">
+      <div class="discussion-panel">
+        <div class="discussion-copy">
+          <p class="eyebrow">LET'S TALK</p>
+          <h2 id="discussion-title">Tell us what you’d like to make easier.</h2>
+          <p>Share a little about your business and what you have in mind. We’ll use it to start a focused conversation about the right next step.</p>
+        </div>
+        <form class="discussion-form" id="project-discussion-form">
+          <div class="discussion-field">
+            <label for="discussion-name">Your name</label>
+            <input id="discussion-name" name="name" type="text" autocomplete="name" placeholder="Name" required>
+          </div>
+          <div class="discussion-field">
+            <label for="discussion-email">Email address</label>
+            <input id="discussion-email" name="email" type="email" autocomplete="email" placeholder="you@business.com" required>
+          </div>
+          <div class="discussion-field">
+            <label for="discussion-business">Business name <span>(optional)</span></label>
+            <input id="discussion-business" name="business" type="text" autocomplete="organization" placeholder="Your business">
+          </div>
+          <div class="discussion-field">
+            <label for="discussion-service">What would you like to discuss?</label>
+            <select id="discussion-service" name="service" required>
+              <option value="" selected disabled>Choose a service</option>
+              <option>AI Calling Agent</option>
+              <option>AI Calling Agent - Starter plan</option>
+              <option>AI Calling Agent - Pro plan</option>
+              <option>WhatsApp Bots</option>
+              <option>Telegram Bots</option>
+              <option>n8n Automation</option>
+              <option>Custom AI Agents</option>
+              <option>Custom Services</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="discussion-field discussion-field-full">
+            <label for="discussion-details">What are you hoping to improve?</label>
+            <textarea id="discussion-details" name="details" placeholder="Tell us about the task, challenge, or idea you’d like to discuss." required></textarea>
+          </div>
+          <button class="button button-dark discussion-submit discussion-field-full" type="submit">Prepare my discussion <span aria-hidden="true">↗</span></button>
+          <p class="discussion-note discussion-field-full" id="discussion-note">Submitting opens your email app with your message ready to send to support@platformdaemon.tech.</p>
+        </form>
+      </div>
     </section>
 
     <section class="why-us shell section-pad" id="why-us" aria-labelledby="why-title">
       <p class="eyebrow">WHY PLATFORMDAEMON</p>
-      <h2 id="why-title">Automation shaped around your business.</h2>
+      <h2 id="why-title">Automate the busywork. Keep the human touch.</h2>
       <div class="why-grid" style="margin-top:24px;">
         <div class="reason-copy">
-          <p>Every business works differently. We build practical AI calling agents, messaging bots, n8n automations, and custom AI agents around the tasks you want to improve—not a one-size-fits-all chatbot.</p>
+          <p><strong>Start with the work slowing you down.</strong> We shape the solution around a real business bottleneck—missed calls, repetitive customer questions, scattered follow-ups, or information staff have to look up again and again.</p>
+          <p>That could mean an AI calling agent that gathers service details, a messaging bot that handles routine enquiries, an n8n workflow that moves information between tools, or a scoped AI agent that helps staff find and prepare information.</p>
         </div>
         <div class="reason-copy">
+          <h3>Know what happens before we build.</h3>
           <ul>
-            <li>Choose a monthly AI calling plan or a one-time custom project.</li>
-            <li>Discuss your workflow and integrations with us before custom work begins.</li>
-            <li>Agree on the scope, requirements, and applicable terms before we build.</li>
+            <li><strong>Discuss:</strong> Tell us about your current process, the people involved, and what you want to improve.</li>
+            <li><strong>Define:</strong> We agree on the service, integrations, handoffs, limits, and project scope before work starts.</li>
+            <li><strong>Build:</strong> The workflow is configured around your approved tools, information, and business rules.</li>
+            <li><strong>Review:</strong> Walk through the agreed flow, make refinements, and confirm how it should behave before handover.</li>
           </ul>
+          <p class="reason-note">Choose a monthly calling plan or discuss a fixed-price custom project. No bloated retainers or unclear scope.</p>
         </div>
       </div>
     </section>
@@ -1154,7 +1310,7 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
             <li>SMS summaries</li>
             <li>Calendar sync</li>
           </ul>
-          <a class="button button-dark" href="mailto:support@platformdaemon.tech?subject=Starter%20Voice%20Agent%20Plan">Get Started <span aria-hidden="true">↗</span></a>
+          <a class="button button-dark" href="#discussion-form" data-service="AI Calling Agent - Starter plan">Get Started <span aria-hidden="true">↗</span></a>
         </article>
         <article class="pricing-card">
           <span class="pricing-label">AI Calling Agent · SaaS</span>
@@ -1167,7 +1323,7 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
             <li>Escalation logic</li>
             <li>Priority workflows</li>
           </ul>
-          <a class="button button-dark" href="mailto:support@platformdaemon.tech?subject=Pro%20Voice%20Agent%20Plan">Get Started <span aria-hidden="true">↗</span></a>
+          <a class="button button-dark" href="#discussion-form" data-service="AI Calling Agent - Pro plan">Get Started <span aria-hidden="true">↗</span></a>
         </article>
         <article class="pricing-card custom-service">
           <span class="pricing-label">Tailored Automation · One-Time</span>
@@ -1180,7 +1336,7 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
             <li>Complex Projects: $140 (Advanced integrations &amp; multi-step systems)</li>
             <li>Custom workflow built for your business</li>
           </ul>
-          <a class="button button-dark schedule-call" href="mailto:support@platformdaemon.tech?subject=Schedule%20a%20Custom%20Project%20Consultation&amp;body=Hi%20PlatformDaemon%2C%0A%0AI%27d%20like%20to%20book%20a%20consultation%20call%20about%20a%20custom%20automation%20project.%0A%0AMy%20project%20idea%3A%20">Schedule a Call <span aria-hidden="true">↗</span></a>
+          <a class="button button-dark schedule-call" href="#discussion-form" data-service="Custom Services">Discuss your project <span aria-hidden="true">↗</span></a>
         </article>
       </div>
     </section>
@@ -1198,5 +1354,39 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
       <p>Intelligent Automation &amp; Voice Agents</p>
     </div>
   </footer>
+  <script>
+    const discussionForm = document.querySelector("#project-discussion-form");
+    const discussionService = document.querySelector("#discussion-service");
+    const discussionNote = document.querySelector("#discussion-note");
+
+    document.querySelectorAll("[data-service]").forEach(link => {
+      link.addEventListener("click", () => {
+        discussionService.value = link.dataset.service;
+      });
+    });
+
+    discussionForm.addEventListener("submit", event => {
+      event.preventDefault();
+      const values = new FormData(discussionForm);
+      const name = String(values.get("name")).trim();
+      const email = String(values.get("email")).trim();
+      const business = String(values.get("business")).trim();
+      const service = String(values.get("service")).trim();
+      const details = String(values.get("details")).trim();
+      const subject = `PlatformDaemon discussion: ${service}`;
+      const body = [
+        `Name: ${name}`,
+        `Email: ${email}`,
+        `Business: ${business || "Not provided"}`,
+        `Service: ${service}`,
+        "",
+        "What I would like to discuss:",
+        details
+      ].join("\n");
+
+      discussionNote.textContent = "Your email app should open with your discussion details ready to send.";
+      window.location.href = `mailto:support@platformdaemon.tech?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+  </script>
 </body>
 </html>
