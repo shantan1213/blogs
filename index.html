@@ -773,6 +773,125 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
       background: #106970;
       color: #ffffff;
     }
+
+    .signal-card {
+      display: grid;
+      gap: 16px;
+    }
+
+    .signal-header {
+      margin-bottom: 0;
+    }
+
+    .service-slide {
+      min-height: 260px;
+      padding: 22px;
+      border: 1px solid #e1e9ef;
+      border-radius: 18px;
+      background: #f7fafc;
+    }
+
+    .service-slide .signal-pill {
+      margin-bottom: 18px;
+    }
+
+    .service-slide h3 {
+      margin-bottom: 12px;
+      color: #14212b;
+      font-size: clamp(26px, 2.4vw, 34px);
+      letter-spacing: -0.05em;
+    }
+
+    .service-slide p {
+      margin-bottom: 20px;
+      color: #526271;
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .service-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .service-tags span {
+      padding: 7px 9px;
+      border: 1px solid #dce5eb;
+      border-radius: 999px;
+      background: #ffffff;
+      color: #526271;
+      font-size: 10px;
+      font-weight: 600;
+    }
+
+    .service-controls,
+    .service-navigation {
+      display: flex;
+      align-items: center;
+    }
+
+    .service-controls {
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .service-navigation {
+      gap: 8px;
+    }
+
+    .service-control {
+      display: inline-flex;
+      min-width: 38px;
+      min-height: 38px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #d4e0e8;
+      border-radius: 50%;
+      background: #ffffff;
+      color: #203140;
+      cursor: pointer;
+      font: 600 15px/1 var(--body);
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .service-control:hover {
+      border-color: #9db8cf;
+      background: #eef5fb;
+    }
+
+    .service-control:focus-visible {
+      outline: 3px solid rgba(37, 99, 166, 0.35);
+      outline-offset: 2px;
+    }
+
+    .service-count {
+      min-width: 48px;
+      color: #526271;
+      font: 500 11px var(--mono);
+      text-align: center;
+    }
+
+    .service-rotation {
+      min-height: 34px;
+      padding: 0 10px;
+      border: 0;
+      background: transparent;
+      color: #526271;
+      cursor: pointer;
+      font: 600 11px var(--body);
+    }
+
+    .service-rotation:hover {
+      color: #1d6ba9;
+    }
+
+    .service-terms {
+      margin: -6px 0 0;
+      color: #73808b;
+      font-size: 10px;
+      text-align: right;
+    }
   </style>
 </head>
 <body>
@@ -794,7 +913,7 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
       <div class="hero-copy">
         <p class="eyebrow"><span class="status-dot"></span> NEXT-GEN AI FOR GROWING BUSINESSES</p>
         <h1 id="hero-title">Enterprise AI Power.<br>Local Business Pricing.</h1>
-        <p class="hero-intro">Never miss a customer call again. Deploy hyper-realistic AI voice agents and custom automation workflows with PlatformDaemon—starting at a fraction of a human receptionist.</p>
+        <p class="hero-intro">Automate customer conversations and repetitive work with AI calling agents, custom WhatsApp and Telegram bots, n8n workflows, and purpose-built AI agents—without enterprise overhead.</p>
         <div class="hero-actions">
           <a class="button button-dark" href="mailto:support@platformdaemon.tech?subject=Request%20a%20voice%20demo">Request a Voice Demo <span aria-hidden="true">↗</span></a>
           <a class="button button-light" href="#ai-services">Explore AI Services <span aria-hidden="true">↗</span></a>
@@ -804,31 +923,52 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
           <a href="mailto:support@platformdaemon.tech?subject=Book%20a%20consultation">Book a consultation</a>
         </div>
       </div>
-      <div class="hero-art hero-visual" aria-hidden="true">
-        <div class="signal-card">
+      <div class="hero-art hero-visual">
+        <div class="signal-card" role="region" aria-roledescription="carousel" aria-label="AI automation services">
           <div class="signal-header">
-            <span>Live Operations</span>
-            <div class="signal-dots"><span></span><span></span><span></span></div>
+            <span>Services We Build</span>
+            <span class="service-count" id="service-count">01 / 05</span>
           </div>
-          <div class="signal-body">
-            <span class="signal-pill">AI voice executive</span>
-            <h3>24/7 customer intake</h3>
-            <p>Instant call triage, FAQ handling, appointment booking, and emergency routing for service businesses.</p>
-            <div class="signal-bars">
-              <span style="height:26%"></span>
-              <span style="height:38%"></span>
-              <span style="height:62%"></span>
-              <span style="height:90%"></span>
-              <span style="height:48%"></span>
-              <span style="height:78%"></span>
-              <span style="height:100%"></span>
-              <span style="height:56%"></span>
-              <span style="height:84%"></span>
-              <span style="height:52%"></span>
-              <span style="height:70%"></span>
-              <span style="height:66%"></span>
+          <div class="service-slides" id="service-slides" aria-live="off">
+            <article class="service-slide" data-service-slide role="group" aria-roledescription="slide" aria-label="1 of 5">
+              <span class="signal-pill">AI Calling Agent</span>
+              <h3>Every call, handled.</h3>
+              <p>Answer customers 24/7, qualify requests, capture details, and book appointments with a natural voice agent.</p>
+              <div class="service-tags"><span>Phone support</span><span>Lead intake</span><span>Appointment booking</span></div>
+            </article>
+            <article class="service-slide" data-service-slide role="group" aria-roledescription="slide" aria-label="2 of 5" hidden>
+              <span class="signal-pill">WhatsApp AI Bots</span>
+              <h3>Turn chats into action.</h3>
+              <p>Custom WhatsApp bots can answer common questions, collect lead details, and route conversations to the right person.</p>
+              <div class="service-tags"><span>Customer support</span><span>Lead qualification</span><span>Instant replies</span></div>
+            </article>
+            <article class="service-slide" data-service-slide role="group" aria-roledescription="slide" aria-label="3 of 5" hidden>
+              <span class="signal-pill">Telegram AI Bots</span>
+              <h3>Automate your Telegram flow.</h3>
+              <p>Build custom Telegram bots for support, notifications, information lookup, and useful AI-powered conversations.</p>
+              <div class="service-tags"><span>Custom commands</span><span>Smart responses</span><span>Notifications</span></div>
+            </article>
+            <article class="service-slide" data-service-slide role="group" aria-roledescription="slide" aria-label="4 of 5" hidden>
+              <span class="signal-pill">n8n AI Automation</span>
+              <h3>Connect the work behind the scenes.</h3>
+              <p>AI-powered n8n workflows connect your apps and automate repetitive tasks, follow-ups, and multi-step business processes.</p>
+              <div class="service-tags"><span>App integrations</span><span>Workflow automation</span><span>AI-assisted tasks</span></div>
+            </article>
+            <article class="service-slide" data-service-slide role="group" aria-roledescription="slide" aria-label="5 of 5" hidden>
+              <span class="signal-pill">Custom AI Agents</span>
+              <h3>Purpose-built for your process.</h3>
+              <p>Design AI agents around your business workflows to research, organize information, and take action with the tools you use.</p>
+              <div class="service-tags"><span>Custom workflows</span><span>Tool integrations</span><span>Business-specific</span></div>
+            </article>
+          </div>
+          <div class="service-controls">
+            <div class="service-navigation" aria-label="Service slideshow controls">
+              <button class="service-control" type="button" data-service-prev aria-label="Previous service">←</button>
+              <button class="service-control" type="button" data-service-next aria-label="Next service">→</button>
             </div>
+            <button class="service-rotation" type="button" data-service-toggle aria-pressed="false">Pause slideshow</button>
           </div>
+          <p class="service-terms">Service scope and availability vary. Terms &amp; conditions apply.</p>
         </div>
       </div>
     </section>
@@ -850,8 +990,8 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
         <article class="offer-card" id="ai-services">
           <span class="offer-badge">Transparent fixed-price packages</span>
           <h3>Tailored AI Automated Services</h3>
-          <p>Custom workflows, instant lead follow-up systems, smart scheduling bots, and document processing built specifically for local business operations.</p>
-          <div class="tags"><span>Lead follow-up</span><span>CRM sync</span><span>Workflow automation</span></div>
+          <p>Custom WhatsApp and Telegram bots, AI-powered n8n workflows, and tailored AI agents built to automate real business operations.</p>
+          <div class="tags"><span>WhatsApp &amp; Telegram bots</span><span>n8n AI workflows</span><span>Custom AI agents</span></div>
         </article>
       </div>
     </section>
@@ -939,5 +1079,69 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
       <p>Intelligent Automation &amp; Voice Agents</p>
     </div>
   </footer>
+  <script>
+    const serviceCarousel = document.querySelector(".hero-visual");
+    const serviceSlidesContainer = serviceCarousel.querySelector("#service-slides");
+    const serviceSlides = Array.from(serviceSlidesContainer.querySelectorAll("[data-service-slide]"));
+    const serviceCount = serviceCarousel.querySelector("#service-count");
+    const rotationButton = serviceCarousel.querySelector("[data-service-toggle]");
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let activeService = 0;
+    let userPaused = reducedMotion.matches;
+    let pointerInside = false;
+    let focusInside = false;
+
+    function updateRotationButton() {
+      const paused = userPaused || pointerInside || focusInside || document.hidden;
+      rotationButton.textContent = userPaused ? "Play slideshow" : "Pause slideshow";
+      rotationButton.setAttribute("aria-pressed", String(userPaused));
+      rotationButton.setAttribute("aria-label", userPaused ? "Play service slideshow" : "Pause service slideshow");
+      return !paused;
+    }
+
+    function showService(index, announceChange = false) {
+      activeService = (index + serviceSlides.length) % serviceSlides.length;
+      serviceSlidesContainer.setAttribute("aria-live", announceChange ? "polite" : "off");
+      serviceSlides.forEach((slide, slideIndex) => {
+        slide.hidden = slideIndex !== activeService;
+        slide.setAttribute("aria-label", `${slideIndex + 1} of ${serviceSlides.length}`);
+      });
+      serviceCount.textContent = `${String(activeService + 1).padStart(2, "0")} / ${String(serviceSlides.length).padStart(2, "0")}`;
+    }
+
+    serviceCarousel.querySelector("[data-service-prev]").addEventListener("click", () => showService(activeService - 1, true));
+    serviceCarousel.querySelector("[data-service-next]").addEventListener("click", () => showService(activeService + 1, true));
+    rotationButton.addEventListener("click", () => {
+      userPaused = !userPaused;
+      updateRotationButton();
+    });
+    serviceCarousel.addEventListener("pointerenter", () => {
+      pointerInside = true;
+    });
+    serviceCarousel.addEventListener("pointerleave", () => {
+      pointerInside = false;
+    });
+    serviceCarousel.addEventListener("focusin", () => {
+      focusInside = true;
+    });
+    serviceCarousel.addEventListener("focusout", event => {
+      focusInside = event.relatedTarget instanceof Node && serviceCarousel.contains(event.relatedTarget);
+    });
+    document.addEventListener("visibilitychange", updateRotationButton);
+    reducedMotion.addEventListener("change", event => {
+      if (event.matches) {
+        userPaused = true;
+      }
+      updateRotationButton();
+    });
+
+    showService(activeService);
+    updateRotationButton();
+    window.setInterval(() => {
+      if (updateRotationButton()) {
+        showService(activeService + 1);
+      }
+    }, 6000);
+  </script>
 </body>
 </html>
