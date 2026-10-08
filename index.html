@@ -83,7 +83,10 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
     }
 
     .hero {
+      width: min(1280px, calc(100% - 64px));
       min-height: 620px;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+      gap: 56px;
       padding-top: 28px;
       padding-bottom: 60px;
     }
@@ -99,15 +102,26 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
     }
 
     .hero-copy h1 {
-      max-width: 720px;
-      letter-spacing: -0.06em;
+      max-width: 760px;
+      font-size: clamp(52px, 4.2vw, 66px);
+      line-height: 1.08;
+      letter-spacing: -0.045em;
     }
 
     .hero-intro {
-      max-width: 540px;
+      max-width: 590px;
       font-size: 16px;
       line-height: 1.8;
       color: rgba(237, 247, 255, 0.8);
+    }
+
+    .hero-actions {
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .hero-links {
+      margin-top: 28px;
     }
 
     .hero-actions .button-dark {
@@ -396,7 +410,7 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
       color: rgba(237, 247, 255, 0.78);
     }
 
-    @media (max-width: 860px) {
+    @media (max-width: 1024px) {
       .site-header nav {
         gap: 12px;
       }
@@ -412,8 +426,12 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
         padding-top: 40px;
       }
 
+      .hero-copy {
+        order: 0;
+      }
+
       .hero-art {
-        order: -1;
+        order: 1;
       }
 
       .signal-card {
@@ -431,6 +449,7 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
       }
       .hero {
         min-height: auto;
+        width: min(100% - 28px, 560px);
       }
       .hero-actions {
         flex-direction: column;
