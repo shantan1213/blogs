@@ -13,9 +13,14 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
   <title>PlatformDaemon | Enterprise AI for Growing Businesses</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/home.css?v=fa138e6">
   <style>
+    :root {
+      --display: "Inter", sans-serif;
+      --body: "Inter", sans-serif;
+    }
+
     body {
       background: #071b2b;
       color: #edf7ff;
@@ -255,7 +260,7 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
       line-height: 1.75;
     }
 
-    .audio-demo {
+    .demo-request {
       margin-top: 32px;
       padding: 32px 30px;
       border: 1px solid rgba(146, 180, 211, 0.18);
@@ -263,108 +268,17 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
       background: linear-gradient(180deg, rgba(12, 31, 45, 0.96), rgba(8, 20, 31, 0.94));
     }
 
-    .audio-demo h2,
+    .demo-request h2,
     .why-us h2,
     .pricing h2 {
       letter-spacing: -0.06em;
     }
 
-    .demo-layout {
-      display: grid;
-      grid-template-columns: 1fr 420px;
-      gap: 28px;
-      align-items: center;
-      margin-top: 22px;
-    }
-
-    .demo-copy p {
-      max-width: 560px;
-      color: rgba(237, 247, 255, 0.82);
+    .demo-request p {
+      max-width: 720px;
+      margin: 14px 0 20px;
+      color: rgba(237, 247, 255, 0.8);
       line-height: 1.8;
-    }
-
-    .demo-player {
-      display: grid;
-      gap: 18px;
-      padding: 18px 18px 16px;
-      border-radius: 22px;
-      border: 1px solid rgba(146, 180, 211, 0.18);
-      background: rgba(2, 18, 30, 0.74);
-    }
-
-    .player-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px;
-    }
-
-    .play-btn {
-      width: 48px;
-      height: 48px;
-      border: none;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #14b8a6, #0ea5e9);
-      color: #041821;
-      font-size: 18px;
-      font-weight: 800;
-      cursor: pointer;
-    }
-
-    .player-title {
-      flex: 1;
-      display: grid;
-      gap: 4px;
-    }
-
-    .player-title strong,
-    .player-title span {
-      display: block;
-    }
-
-    .player-title span {
-      color: rgba(237, 247, 255, 0.68);
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-    }
-
-    .waveform {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 5px;
-      height: 82px;
-      padding: 12px 10px 8px;
-      border-radius: 12px;
-      background: rgba(8, 27, 43, 0.9);
-    }
-
-    .waveform span {
-      display: block;
-      width: 7px;
-      border-radius: 999px 999px 0 0;
-      background: linear-gradient(180deg, #5eead4, #0ea5e9);
-      animation: pulse 1.2s ease-in-out infinite alternate;
-    }
-
-    @keyframes pulse {
-      0% { transform: scaleY(0.5); opacity: 0.7; }
-      100% { transform: scaleY(1); opacity: 1; }
-    }
-
-    .waveform span:nth-child(2n) { animation-delay: .12s; }
-    .waveform span:nth-child(3n) { animation-delay: .24s; }
-    .waveform span:nth-child(4n) { animation-delay: .36s; }
-
-    .demo-meta {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      color: rgba(237, 247, 255, 0.74);
-      font-size: 12px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
     }
 
     .why-us {
@@ -488,7 +402,6 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
       }
 
       .hero,
-      .demo-layout,
       .why-grid,
       .pricing-grid,
       .offer-grid {
@@ -527,13 +440,12 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
       .nav-cta {
         width: 100%;
       }
-      .demo-player,
       .offer-card,
       .reason-copy,
       .pricing-card {
         padding: 20px 16px;
       }
-      .audio-demo {
+      .demo-request {
         padding: 22px 16px;
       }
     }
@@ -560,12 +472,12 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
         <h1 id="hero-title">Enterprise AI Power.<br>Local Business Pricing.</h1>
         <p class="hero-intro">Never miss a customer call again. Deploy hyper-realistic AI voice agents and custom automation workflows with PlatformDaemon—starting at a fraction of a human receptionist.</p>
         <div class="hero-actions">
-          <a class="button button-dark" href="#voice-agent">Listen to AI Voice Demo <span aria-hidden="true">↓</span></a>
+          <a class="button button-dark" href="mailto:support@platformdaemon.tech?subject=Request%20a%20voice%20demo">Request a Voice Demo <span aria-hidden="true">↗</span></a>
           <a class="button button-light" href="#ai-services">Explore AI Services <span aria-hidden="true">↗</span></a>
         </div>
         <div class="hero-links" aria-label="Social and contact links">
           <a href="mailto:support@platformdaemon.tech">support@platformdaemon.tech</a>
-          <a href="#pricing">Book a consultation</a>
+          <a href="mailto:support@platformdaemon.tech?subject=Book%20a%20consultation">Book a consultation</a>
         </div>
       </div>
       <div class="hero-art hero-visual" aria-hidden="true">
@@ -620,46 +532,11 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
       </div>
     </section>
 
-    <section class="shell audio-demo section-pad" aria-labelledby="demo-title">
-      <p class="eyebrow">INTERACTIVE DEMO</p>
-      <h2 id="demo-title">Hear the PlatformDaemon Difference</h2>
-      <div class="demo-layout">
-        <div class="demo-copy">
-          <p>Listen to how naturally our AI customer executive handles a live service booking or maintenance triage call.</p>
-        </div>
-        <div class="demo-player" aria-label="Sample AI voice call preview">
-          <div class="player-top">
-            <button class="play-btn" type="button" aria-label="Play audio demo">▶</button>
-            <div class="player-title">
-              <strong>Sample Call: Urgent Maintenance Triage</strong>
-              <span>PlatformDaemon AI</span>
-            </div>
-          </div>
-          <div class="waveform" aria-hidden="true">
-            <span style="height:30%"></span>
-            <span style="height:45%"></span>
-            <span style="height:63%"></span>
-            <span style="height:82%"></span>
-            <span style="height:58%"></span>
-            <span style="height:92%"></span>
-            <span style="height:76%"></span>
-            <span style="height:87%"></span>
-            <span style="height:43%"></span>
-            <span style="height:70%"></span>
-            <span style="height:54%"></span>
-            <span style="height:91%"></span>
-            <span style="height:68%"></span>
-            <span style="height:80%"></span>
-            <span style="height:52%"></span>
-            <span style="height:60%"></span>
-            <span style="height:72%"></span>
-          </div>
-          <div class="demo-meta">
-            <span>00:32</span>
-            <span>AI VIRTUAL CALL</span>
-          </div>
-        </div>
-      </div>
+    <section class="shell demo-request section-pad" aria-labelledby="demo-title">
+      <p class="eyebrow">VOICE AGENT DEMO</p>
+      <h2 id="demo-title">Want to hear it in action?</h2>
+      <p>There isn’t a public demo recording yet. Tell us about your business and request a voice-agent demo tailored to the calls you handle.</p>
+      <a class="button button-dark" href="mailto:support@platformdaemon.tech?subject=Request%20a%20voice%20agent%20demo">Request a demo by email <span aria-hidden="true">↗</span></a>
     </section>
 
     <section class="why-us shell section-pad" id="why-us" aria-labelledby="why-title">
@@ -692,6 +569,7 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
             <li>SMS summaries</li>
             <li>Calendar sync</li>
           </ul>
+          <a class="button button-dark" href="mailto:support@platformdaemon.tech?subject=Starter%20Voice%20Agent%20Plan">Get Started <span aria-hidden="true">↗</span></a>
         </article>
         <article class="pricing-card">
           <h3>Pro</h3>
@@ -702,6 +580,7 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
             <li>Escalation logic</li>
             <li>Priority workflows</li>
           </ul>
+          <a class="button button-dark" href="mailto:support@platformdaemon.tech?subject=Pro%20Voice%20Agent%20Plan">Get Started <span aria-hidden="true">↗</span></a>
         </article>
         <article class="pricing-card">
           <h3>Custom Services</h3>
@@ -712,6 +591,7 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
             <li>No hidden retainer fees</li>
             <li>Flexible implementation</li>
           </ul>
+          <a class="button button-dark" href="mailto:support@platformdaemon.tech?subject=Custom%20AI%20Services%20Quote">Request a Quote <span aria-hidden="true">↗</span></a>
         </article>
       </div>
     </section>
