@@ -1352,7 +1352,8 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
           <h2 id="discussion-title">Tell us what you’d like to make easier.</h2>
           <p>Share a little about your business and what you have in mind. We’ll use it to start a focused conversation about the right next step.</p>
         </div>
-        <form class="discussion-form" id="project-discussion-form">
+        <form class="discussion-form" id="project-discussion-form" action="https://formspree.io/f/mppqdnla" method="POST">
+          <input type="hidden" name="_subject" value="New PlatformDaemon project discussion">
           <div class="discussion-field">
             <label for="discussion-name">Your name</label>
             <input id="discussion-name" name="name" type="text" autocomplete="name" placeholder="Name" required>
@@ -1382,10 +1383,10 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
           </div>
           <div class="discussion-field discussion-field-full">
             <label for="discussion-details">What are you hoping to improve?</label>
-            <textarea id="discussion-details" name="details" placeholder="Tell us about the task, challenge, or idea you’d like to discuss." required></textarea>
+            <textarea id="discussion-details" name="message" placeholder="Tell us about the task, challenge, or idea you’d like to discuss." required></textarea>
           </div>
-          <button class="button button-dark discussion-submit discussion-field-full" type="submit">Prepare my discussion <span aria-hidden="true">↗</span></button>
-          <p class="discussion-note discussion-field-full" id="discussion-note">Submitting opens your email app with your message ready to send to support@platformdaemon.tech.</p>
+          <button class="button button-dark discussion-submit discussion-field-full" type="submit">Send my discussion <span aria-hidden="true">↗</span></button>
+          <p class="discussion-note discussion-field-full">Your message will be sent securely. Formspree will confirm when it has been received.</p>
         </form>
       </div>
     </section>
@@ -1404,37 +1405,12 @@ description: PlatformDaemon provides enterprise-grade AI automation and autonomo
     </div>
   </footer>
   <script>
-    const discussionForm = document.querySelector("#project-discussion-form");
     const discussionService = document.querySelector("#discussion-service");
-    const discussionNote = document.querySelector("#discussion-note");
 
     document.querySelectorAll("[data-service]").forEach(link => {
       link.addEventListener("click", () => {
         discussionService.value = link.dataset.service;
       });
-    });
-
-    discussionForm.addEventListener("submit", event => {
-      event.preventDefault();
-      const values = new FormData(discussionForm);
-      const name = String(values.get("name")).trim();
-      const email = String(values.get("email")).trim();
-      const business = String(values.get("business")).trim();
-      const service = String(values.get("service")).trim();
-      const details = String(values.get("details")).trim();
-      const subject = `PlatformDaemon discussion: ${service}`;
-      const body = [
-        `Name: ${name}`,
-        `Email: ${email}`,
-        `Business: ${business || "Not provided"}`,
-        `Service: ${service}`,
-        "",
-        "What I would like to discuss:",
-        details
-      ].join("\n");
-
-      discussionNote.textContent = "Your email app should open with your discussion details ready to send.";
-      window.location.href = `mailto:support@platformdaemon.tech?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     });
   </script>
 </body>
